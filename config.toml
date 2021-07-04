@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://examplesite.com"
+baseURL = "https://urgrenki.ru"
 languageCode = "en"
 title = "Hargo | Hugo Ecommerce Site"
 theme = "hargo"
