@@ -1,7 +1,7 @@
 ######################## default configuration ####################
 baseURL = "https://urgrenki.ru"
-languageCode = "en"
-title = "Hargo | Hugo Ecommerce Site"
+languageCode = "ru"
+title = "Уральские гренки"
 theme = "hargo"
 summaryLength = "20"
 paginate = 10
@@ -33,12 +33,12 @@ disqusShortname = ""
 [menu]
 
   [[menu.main]]
-  name = "Products"
+  name = "Продукция"
   URL = "products"
   weight = 1
 
   [[menu.main]]
-  name = "Blog"
+  name = "Новости"
   URL = "blog"
   weight = 2
 
@@ -48,18 +48,18 @@ disqusShortname = ""
   weight = 3
 
   [[menu.main]]
-  name = "Contact"
+  name = "Контакты"
   URL = "contact"
   weight = 4
 
   ############# footer menu #############
   [[menu.footer]]
-  name = "Products"
+  name = "Продукция"
   URL = "products"
   weight = 1
 
   [[menu.footer]]
-  name = "Blog"
+  name = "Новости"
   URL = "blog"
   weight = 2
 
@@ -69,12 +69,12 @@ disqusShortname = ""
   weight = 3
 
   [[menu.footer]]
-  name = "Terms & Conditions"
+  name = "Пользовательское соглашение"
   URL = "terms-conditions"
   weight = 4
 
   [[menu.footer]]
-  name = "Contact"
+  name = "Контакты"
   URL = "contact"
   weight = 5
 
@@ -82,23 +82,23 @@ disqusShortname = ""
 #################### default parameters ################################
 [params]
 logo = "images/logo.png"
-home = "Home"
+home = "О нас"
 # Meta data
 description = "This is meta description"
 author = "Themefisher"
 # google map
 gmapAPI = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"
-mapLatitude = "51.5223477"
-mapLongitude = "-0.1622023"
+mapLatitude = "56.792015"
+mapLongitude = "60.606997"
 mapMarker = "images/marker.png"
 # Google Analitycs
 googleAnalitycsID = "" # Your ID
 # Contact Information
-mobile = "0124857985320"
-email = "demo@email.com"
-location = "Dhaka, Bangladedsh"
+mobile = "83433022565"
+email = "mail@urgrenki.ru"
+location = "Екатеринбург, Россия"
 # copyright
-copyright = "| Copyright &copy; 2019 [Gethugothemes](https://gethugothemes.com) All Rights Reserved |"
+copyright = "| Copyright &copy; 2021 [Gethugothemes](https://gethugothemes.com) All Rights Reserved |"
 # Snipcart Credentials
 snipcartApiKey = "M2E5YjA3NjMtYzRiYS00YzVjLWEyYWYtNDY5ZDI0OWZhYjg5"
 currencySymbol = "$"

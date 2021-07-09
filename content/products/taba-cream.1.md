@@ -11,7 +11,7 @@ price: "20.00"
 priceBefore: "25.00"
 
 # Product Short Description
-shortDescription: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"
+shortDescription: "Я люблю мазаться кремами"
 
 #product ID
 productID: "1"
