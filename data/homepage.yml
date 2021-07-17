@@ -1,18 +1,17 @@
 ############################ banner ##########################
 banner:
   enable : true
-  title : "Best Beauty Cream For Your Skin"
-  content : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed dia"
+  title : "Лучшие Гренки"
+  content : "100% натуральный состав. Наша продукция готовится только из натуральных ингредиентов!"
   image : "images/banner.png"
   # button
   button:
     enable : true
-    label : "All Products"
+    label : "Продукция"
     link : "products"
   # demo video
   video:
-    enable : true
+    enable : false
     videoURL : "https://www.youtube.com/embed/wf4F2-9UXUo"
 
 ########################## About ##############################
@@ -80,13 +79,13 @@ advantage:
 
 
 ######################## Promo Video ##########################
-video:
-  enable : true
-  title : "How To Use This Product?"
-  content : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et."
-  videoThumb : "images/video-thumb.jpg"
-  videoURL : "https://www.youtube.com/embed/wf4F2-9UXUo"
+# video:
+#   enable : true
+#   title : "How To Use This Product?"
+#   content : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+#           dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et."
+#   videoThumb : "images/video-thumb.jpg"
+#   videoURL : "https://www.youtube.com/embed/wf4F2-9UXUo"
 
 
 ######################## Products #############################
