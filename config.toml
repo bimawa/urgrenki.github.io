@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://urgrenki.ru"
+baseURL = "https://bimawa.com/urgrenki.github.io"
 languageCode = "ru"
 title = "Уральские гренки"
 theme = "hargo"
