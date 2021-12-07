@@ -17,65 +17,62 @@ banner:
 ########################## About ##############################
 about:
   enable : true
-  title : "About Our Product"
-  content : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-          clita kasd gubergren,"
+  title : "О нашем продукте"
+  content : "Наши гренки изготавливаются из высочайшего класса продуктов. Мы контролируем процессы изготовления от начала посадки зерновой культуры до поступления продукции в магазины или в дома наших клиентов. Мы около 2-х лет подбирали лучшие параметры для хлеба, и наш хлеб разбирают в булочных за милую душу. Но наша цель сделать гренки качества старинных рецептур. Отборная обжарка в нашем масле, собственного производства и ароматного чесночка придают не забываемые ощущения гренок. Попробовав раз, и Уральские Гренки будут вашим постоянным другом на столе."
   image : "images/about.png"
 
 
 ###################### Call to action ########################
 cta:
   enable : true
-  title : "Buy one Get One Free Taba Cream"
-  content : "Available for limited time only. Grab one while you still can!"
+  title : "Посмотреть все сорта наших Гренок вы можете в разделе Продукция"
+  content : "Гренки заканчиваются быстро успейте заказать сегодня!"
   image : "images/cta.png"
   overlayImage : "images/cta-overlay.png"
   button:
-    label : "All Products"
+    label : "Все гренки!"
     link : "products"
 
 ######################## raw material #######################
 material:
   enable : true
-  title : "Ingredients Of Our Products"
-  subtitle : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dol."
+  title : "Ингредиенты нашей продукции"
+  subtitle : "Все ингредиенты выращены под нашим чутким контролем. Под полящим солнцем южных широт! "
   materialItem:
     # material item loop
-    - title : "Matcha Seeds"
+    - title : "Зерна"
       image : "images/material/material-1.png"
-      content : "Lorem ipsum dolor sit amet,be consetetur sadipscing elitr, sed diam nonumy eirmod tem"
+      content : "Хлеб основа наших гренок. К выбору хлеба мы подходили очень качественно, ни что нас не устраивало и терялся дух старорусских рецептур. Пришлось выбирать зерна. И мы нашли то что нужно!"
       
     # material item loop
-    - title : "Aloe Vera"
+    - title : "Чеснок"
       image : "images/material/material-2.png"
-      content : "Lorem ipsum dolor sit amet,be consetetur sadipscing elitr, sed diam nonumy eirmod tem"
+      content : "Ни для кого не секрет, что чеснок придает аппетитный аромат. Наш чеснок растет на Русской земле под Русским солнцем, в нем вся сила наших предков! И он ядрен как мать!"
       
     # material item loop
-    - title : "Turmeric"
+    - title : "Перчик Чили"
       image : "images/material/material-3.png"
-      content : "Lorem ipsum dolor sit amet,be consetetur sadipscing elitr, sed diam nonumy eirmod tem"
+      content : "Перчик Чили привозим с Кавказа, очень ядреный и сладкий! Используется для приготовления аджики, по лучшей рецептуре кавказских традиций. Для острых Уральских Гренок!"
       
     # material item loop
-    - title : "Tulshi leaf"
+    - title : "Хлеб"
       image : "images/material/material-4.png"
-      content : "Lorem ipsum dolor sit amet,be consetetur sadipscing elitr, sed diam nonumy eirmod tem"
+      content : "Отобрав лучшие зерна для нашего хлеба, и правильной концентрации брожения. Мы выпекаем лучший хлеб для наших гренок. Но съедаем больше чем доходит до продукции... очень уж он вкусный получается."
 
 ########################### Advantage #########################
 advantage:
   enable : true
-  title : "Advantages Of Using <br> Our Product"
-  subtitle : "Lorem ipsum dolor sit amet, da decal consetetur<br> sadipscing elitr, sed diam nonumya eirmod"
+  title : "Как можно использовать наши гренки"
+  subtitle : "Конечно же наши гренки можно не только есть с ними можно делать что угодно!"
   image : "images/advantage.png"
   advantageList:
     # advantage list loop
-    - listItem : "Extremely lightweight"
-    - listItem : "Excellent breathability"
-    - listItem : "Can increase Cell activation"
-    - listItem : "Glowing Skin In 7 Days"
-    - listItem : "Increasing Glow Of Face"
-    - listItem : "More Beautiful Face Skin"
+    - listItem : "Накрошить в горошницу"
+    - listItem : "Делать бутерброды"
+    - listItem : "Делать салатики"
+    - listItem : "Отложить на черный день"
+    - listItem : "Смотреть кино вместо попкорна"
+    - listItem : "Да и просто хорошая закуска"
 
 
 ######################## Promo Video ##########################
@@ -90,15 +87,15 @@ advantage:
 
 ######################## Products #############################
 products:
-  enable : true
-  title : "Products List"
+  enable : false
+  title : "Наши гренки"
   # product item comes from "content/products"
 
 
 ########################## Testimonial ########################
 testimonial:
-  enable : true
-  title : "What People Are Saying <br> About Our Product"
+  enable : false
+  title : "Что говорят наши клиенты об Уральских Гренках"
   testimonialItem:
     # testimonial item loop
     - name : "Angelo Perara"
