@@ -42,15 +42,15 @@ disqusShortname = ""
   URL = "blog"
   weight = 2
 
-  [[menu.main]]
-  name = "FAQ"
-  URL = "faq"
-  weight = 3
+  #[[menu.main]]
+  #name = "FAQ"
+  #URL = "faq"
+  #weight = 3
 
-  [[menu.main]]
-  name = "Контакты"
-  URL = "contact"
-  weight = 4
+  #[[menu.main]]
+  #name = "Контакты"
+  #URL = "contact"
+  #weight = 4
 
   ############# footer menu #############
   [[menu.footer]]
@@ -96,7 +96,7 @@ googleAnalitycsID = "" # Your ID
 # Contact Information
 mobile = "83433022565"
 email = "mail@urgrenki.ru"
-location = "Екатеринбург, Россия"
+location = "Екатеринбург, Россия, 8 марта"
 # copyright
 copyright = "| Copyright &copy; 2021 [Gethugothemes](https://gethugothemes.com) All Rights Reserved |"
 # Snipcart Credentials
@@ -111,7 +111,7 @@ currencySymbol = "$"
   # Product Rating
   # it works with https://rating-widget.com/ , you will get the ID and publicKey after creating your account there.
   [params.rating]
-  enable = true
+  enable = false
   websiteID = "444334"
   publicKey = "811cf0927332bf51f2e12f84608594ac"
 
