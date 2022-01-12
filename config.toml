@@ -38,19 +38,20 @@ disqusShortname = ""
   weight = 1
 
   [[menu.main]]
-  name = "Новости"
-  URL = "blog"
+  name = "Рецепты"
+  URL = "recept"
   weight = 2
 
-  #[[menu.main]]
-  #name = "FAQ"
-  #URL = "faq"
-  #weight = 3
+  [[menu.main]]
+  name = "Как заказать"
+  URL = "zakazat"
+  weight = 3
 
-  #[[menu.main]]
-  #name = "Контакты"
-  #URL = "contact"
-  #weight = 4
+
+  [[menu.main]]
+  name = "Контакты"
+  URL = "contact"
+  weight = 4
 
   ############# footer menu #############
   [[menu.footer]]
@@ -59,14 +60,15 @@ disqusShortname = ""
   weight = 1
 
   [[menu.footer]]
-  name = "Новости"
-  URL = "blog"
+  name = "Рецепты"
+  URL = "recept"
   weight = 2
 
   [[menu.footer]]
-  name = "FAQ"
-  URL = "faq"
+  name = "Как заказать"
+  URL = "zakazat"
   weight = 3
+
 
   [[menu.footer]]
   name = "Пользовательское соглашение"
