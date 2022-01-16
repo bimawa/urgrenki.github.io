@@ -1,13 +1,13 @@
 ---
 title: "Гренки с Аджикой"
 date: 2022-01-12T08:50:08+05:00
-draft: false
+draft: true
 
 # meta description
 description : ""
 
 # product Price
-price: "20.00"
+price: "0"
 priceBefore: ""
 
 # Product Short Description
