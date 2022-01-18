@@ -86,7 +86,7 @@ disqusShortname = ""
 logo = "images/logo.png"
 home = "О нас"
 # Meta data
-description = "This is meta description"
+description = "Лучшие гренки России"
 author = "Themefisher"
 # google map
 gmapAPI = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"
@@ -103,7 +103,7 @@ location = "Екатеринбург, Россия, 8 марта"
 copyright = "| Copyright &copy; 2021 [Gethugothemes](https://gethugothemes.com) All Rights Reserved |"
 # Snipcart Credentials
 snipcartApiKey = "M2E5YjA3NjMtYzRiYS00YzVjLWEyYWYtNDY5ZDI0OWZhYjg5"
-currencySymbol = "$"
+currencySymbol = "₽"
 
   # Preloader
   [params.preloader]

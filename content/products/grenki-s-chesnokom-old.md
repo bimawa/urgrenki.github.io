@@ -1,6 +1,6 @@
 ---
 title: "Гренки с чесноком"
-date: 2022-01-03T07:16:43+05:00
+date: 2022-01-02T07:16:43+05:00
 draft: false
 
 # meta description
@@ -11,15 +11,15 @@ priceBefore: "90.00"
 
 shortDescription: "\"Уральские гренки\" с чесноком"
 
-productID: "1"
+productID: "3"
 
 type: "products"
 
 images:
-  - image: "images/products/chesnok-1.png"
+  - image: "images/products/chesnok-5.png"
   - image: "images/products/chesnok-2.png"
   - image: "images/products/chesnok-3.png"
-  
+
 ---
 
 Тонкие, хрустящие, обжаренные, ломтики ржано-пшеничного хлеба, умеренно посыпанные солью и сладковато острым чесноком.
