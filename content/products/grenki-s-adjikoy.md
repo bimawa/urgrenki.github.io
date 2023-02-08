@@ -7,8 +7,8 @@ draft: false
 description : ""
 
 # product Price
-price: "70.00"
-priceBefore: "90.00"
+price: " 99.89"
+#priceBefore: "90.00"
 
 # Product Short Description
 shortDescription: "\"Уральские гренки\" с Аджикой"
