@@ -37,15 +37,15 @@ disqusShortname = ""
   URL = "products"
   weight = 1
 
-  [[menu.main]]
-  name = "Рецепты"
-  URL = "recept"
-  weight = 2
+  # [[menu.main]]
+  # name = "Рецепты"
+  # URL = "recept"
+  # weight = 2
 
-  [[menu.main]]
-  name = "Как заказать"
-  URL = "zakazat"
-  weight = 3
+  # [[menu.main]]
+  # name = "Как заказать"
+  # URL = "zakazat"
+  # weight = 3
 
 
   [[menu.main]]
