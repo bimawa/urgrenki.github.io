@@ -4,11 +4,11 @@ date: 2022-01-01T08:50:08+05:00
 draft: false
 
 # meta description
-description : ""
+description : "с Аджикой"
 
 # product Price
-price: " 99.89"
-#priceBefore: "90.00"
+price: " 89.00"
+priceBefore: " 99.00"
 
 # Product Short Description
 shortDescription: "\"Уральские гренки\" с Аджикой"

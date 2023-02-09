@@ -6,8 +6,8 @@ draft: false
 # meta description
 description : "С чесноком"
 
-price: " 99.89"
-#priceBefore: "90.00"
+price: " 89.00"
+priceBefore: "99.00"
 
 shortDescription: "\"Уральские гренки\" с чесноком"
 
