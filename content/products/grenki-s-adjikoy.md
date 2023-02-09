@@ -22,7 +22,7 @@ type: "products"
 # product Images
 # first image will be shown in the product page
 images:
-  - image: "images/products/adjika-1.png"
+  - image: "images/products/adjika-3.png"
   - image: "images/products/adjika-2.png"
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Гренки с чесноком"
 date: 2022-01-02T07:16:43+05:00
-draft: false
+draft: true
 
 # meta description
 description : "С чесноком"
