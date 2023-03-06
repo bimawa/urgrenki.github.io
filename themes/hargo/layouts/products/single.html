@@ -29,6 +29,9 @@
         </div>
         <h5>Описание</h5>
         <p>{{ .Params.ShortDescription | markdownify }}</p>
+        <button class="btn btn-sm btn-outline-primary" onclick="window.open('{{.Params.SellURL}}')">
+          Купить
+        </button>
       </div>
       <div class="col-12 mt-5">
         <ul class="nav nav-tabs border-bottom-0" id="myTab" role="tablist">

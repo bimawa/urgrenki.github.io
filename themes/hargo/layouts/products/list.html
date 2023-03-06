@@ -22,6 +22,9 @@
               {{ end }}
               <span class="lead text-primary">{{ site.Params.currencySymbol }}{{ .Params.Price }}</span>
             </div>
+            <button class="btn btn-sm btn-outline-primary" onclick="window.open('{{.Params.SellURL}}')">
+              Купить
+            </button>
           </div>
         </div>
       </div>
