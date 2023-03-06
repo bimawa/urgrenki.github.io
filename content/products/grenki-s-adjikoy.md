@@ -7,7 +7,7 @@ draft: false
 description : "с Аджикой"
 
 # product Price
-price: " 89.00"
+price: " 79.00"
 priceBefore: " 99.00"
 sellURL: "https://market.yandex.ru/store--uralskie-grenki/product/1811458297?businessId=52277773&sku=101920828773"
 

@@ -6,7 +6,7 @@ draft: false
 # meta description
 description : "С чесноком"
 
-price: " 89.00"
+price: " 79.00"
 priceBefore: "99.00"
 sellURL: "https://market.yandex.ru/store--uralskie-grenki/product/1811442135?businessId=52277773&sku=101920809027"
 
