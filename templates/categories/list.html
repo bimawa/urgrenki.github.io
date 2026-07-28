@@ -7,10 +7,10 @@
       <p class="eyebrow">Рубрики</p>
       <h1>Все рубрики</h1>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:var(--space-6);">
+    <div class="categories-grid">
       {% for term in terms %}
-      <a href="{{ term.permalink }}" class="card" style="display:block;text-decoration:none;text-align:center;padding:var(--space-8) var(--space-4);">
-        <h3 style="color:var(--fg);">{{ term.name }}</h3>
+      <a href="{{ term.permalink }}" class="categories-card">
+        <h3>{{ term.name }}</h3>
         <span class="meta">{{ term.pages | length }} записей</span>
       </a>
       {% endfor %}

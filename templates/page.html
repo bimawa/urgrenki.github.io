@@ -11,19 +11,18 @@
 </section>
 
 {% if page.extra.image %}
-<section class="section" style="padding-top:0;">
+<section class="section section-pt-0">
   <div class="container">
-    <figure style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--elev-raised);">
+    <figure class="post-figure">
       <img src="{{ get_url(path='img/' ~ page.extra.image, trailing_slash=false) }}"
-        alt="{{ page.title }}"
-        style="width:100%;height:auto;display:block;">
+        alt="{{ page.title }}">
     </figure>
   </div>
 </section>
 {% endif %}
 
 {% if page.extra.is_contacts %}
-<section class="section" style="padding-top:0;">
+<section class="section section-pt-0">
   <div class="container">
     <div class="contact-grid">
 
@@ -63,7 +62,7 @@
 
       <div class="contact-form">
         <h3>Напишите нам</h3>
-        <form action="#" method="post">
+        <form action="mailto:{{ config.extra.email }}" method="post" enctype="text/plain">
           <div class="form-field">
             <label for="name">Имя</label>
             <input type="text" id="name" name="name" placeholder="Ваше имя" required>
@@ -80,7 +79,7 @@
             <label for="message">Сообщение</label>
             <textarea id="message" name="message" placeholder="Ваше сообщение..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" style="width:100%;">Отправить</button>
+          <button type="submit" class="btn btn-primary btn-full">Отправить</button>
         </form>
       </div>
 
@@ -89,7 +88,7 @@
 </section>
 {% endif %}
 
-<section class="section" style="padding-top:0;">
+<section class="section section-pt-0">
   <div class="container">
     <div class="page-content">
       {{ page.content | safe }}

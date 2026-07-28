@@ -16,9 +16,8 @@
       {% for page in term.pages %}
       <article class="blog-entry">
         {% if page.extra.image %}
-        <a href="{{ page.permalink }}">
-          <img src="{{ get_url(path='img/' ~ page.extra.image, trailing_slash=false) }}" alt="{{ page.title }}"
-            style="width:100%;max-height:360px;object-fit:cover;border-radius:var(--radius-md);margin-bottom:var(--space-4);box-shadow:var(--elev-raised);">
+        <a href="{{ page.permalink }}" class="photo-figure">
+          <img src="{{ get_url(path='img/' ~ page.extra.image, trailing_slash=false) }}" alt="{{ page.title }}" loading="lazy">
         </a>
         {% endif %}
         <div class="blog-date">
@@ -27,7 +26,7 @@
         </div>
         <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
         <div class="blog-excerpt">{{ page.description }}</div>
-        <a href="{{ page.permalink }}" style="font-size:var(--text-sm);font-weight:600;">Читать далее →</a>
+        <a href="{{ page.permalink }}" class="blog-read-more">Читать далее →</a>
       </article>
       {% endfor %}
     </div>

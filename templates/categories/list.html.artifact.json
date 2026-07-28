@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "kind": "html",
+  "title": "templates/categories/list.html",
+  "entry": "templates/categories/list.html",
+  "renderer": "html",
+  "status": "complete",
+  "exports": [
+    "html",
+    "pdf",
+    "zip"
+  ],
+  "createdAt": "2026-07-28T04:36:10.456Z",
+  "updatedAt": "2026-07-28T04:36:10.456Z",
+  "metadata": {
+    "inferred": true,
+    "reconciled": true
+  }
+}

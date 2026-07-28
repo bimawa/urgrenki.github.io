@@ -2,7 +2,7 @@
 
 {% block content %}
 <article>
-  <section class="section" style="padding-bottom:0;">
+  <section class="section section-pb-0">
     <div class="container">
       <div class="post-header">
         {% if page.taxonomies.tags %}
@@ -18,35 +18,34 @@
   </section>
 
   {% if page.extra.image %}
-  <section class="section" style="padding-top:0;">
+  <section class="section section-pt-0">
     <div class="container">
-      <figure style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--elev-raised);">
+      <figure class="post-figure">
         <img src="{{ get_url(path='img/' ~ page.extra.image, trailing_slash=false) }}"
-          alt="{{ page.title }}"
-          style="width:100%;height:auto;display:block;">
+          alt="{{ page.title }}">
       </figure>
     </div>
   </section>
   {% endif %}
 
-  <section class="section" style="padding-top:0;">
+  <section class="section section-pt-0">
     <div class="container">
       <div class="post-content">
         {{ page.content | safe }}
       </div>
 
       <div class="post-footer">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);">
+        <div class="post-nav-grid">
           {% if page.lower %}
-          <a href="{{ page.lower.permalink }}" class="card" style="text-decoration:none;">
-            <span style="font-family:var(--font-mono);font-size:var(--text-xs);color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">← Предыдущий</span>
-            <h4 style="margin-top:var(--space-2);color:var(--fg);">{{ page.lower.title }}</h4>
+          <a href="{{ page.lower.permalink }}" class="card post-nav-prev">
+            <span class="post-nav-label">← Предыдущий</span>
+            <h4>{{ page.lower.title }}</h4>
           </a>
           {% endif %}
           {% if page.higher %}
-          <a href="{{ page.higher.permalink }}" class="card" style="text-decoration:none;text-align:right;{% if page.lower %}{% else %}grid-column:2;{% endif %}">
-            <span style="font-family:var(--font-mono);font-size:var(--text-xs);color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">Следующий →</span>
-            <h4 style="margin-top:var(--space-2);color:var(--fg);">{{ page.higher.title }}</h4>
+          <a href="{{ page.higher.permalink }}" class="card post-nav-next">
+            <span class="post-nav-label">Следующий →</span>
+            <h4>{{ page.higher.title }}</h4>
           </a>
           {% endif %}
         </div>

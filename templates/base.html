@@ -31,12 +31,13 @@
 
       <nav role="navigation" aria-label="Основное меню">
         <ul class="nav-menu">
-          <li><a href="{{ config.base_url }}" class="nav-link">Главная</a></li>
-          <li><a href="{{ config.base_url }}/products/" class="nav-link">Продукция</a></li>
-          <li><a href="{{ config.base_url }}/news/" class="nav-link">Новости</a></li>
-          <li><a href="{{ config.base_url }}/recipes/" class="nav-link">Рецепты</a></li>
-          <li><a href="{{ config.base_url }}/o-kompanii/" class="nav-link">О компании</a></li>
-          <li><a href="{{ config.base_url }}/kontakty/" class="nav-link">Контакты</a></li>
+          {% set here = current_url | default(value="") %}
+          <li><a href="{{ config.base_url }}" class="nav-link{% if here == config.base_url ~ '/' %} active{% endif %}">Главная</a></li>
+          <li><a href="{{ config.base_url }}/products/" class="nav-link{% if here is starting_with(config.base_url ~ '/products/') %} active{% endif %}">Продукция</a></li>
+          <li><a href="{{ config.base_url }}/news/" class="nav-link{% if here is starting_with(config.base_url ~ '/news/') %} active{% endif %}">Новости</a></li>
+          <li><a href="{{ config.base_url }}/recipes/" class="nav-link{% if here is starting_with(config.base_url ~ '/recipes/') %} active{% endif %}">Рецепты</a></li>
+          <li><a href="{{ config.base_url }}/o-kompanii/" class="nav-link{% if here is starting_with(config.base_url ~ '/o-kompanii/') %} active{% endif %}">О компании</a></li>
+          <li><a href="{{ config.base_url }}/kontakty/" class="nav-link{% if here is starting_with(config.base_url ~ '/kontakty/') %} active{% endif %}">Контакты</a></li>
         </ul>
       </nav>
     </div>
