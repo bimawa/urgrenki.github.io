@@ -1,2 +1,3 @@
-User-Agent: *
-Allow: /
+User-agent: *
+Disallow:
+Sitemap: https://urgrenki.ru/sitemap.xml
