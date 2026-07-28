@@ -20,11 +20,10 @@
   <header class="header" role="banner">
     <div class="container header-inner">
       <a href="{{ config.base_url }}" class="header-logo">
-        <img src="{{ get_url(path='img/logo.png', trailing_slash=false) | safe }}" alt="{{ config.title }}" style="height:48px;width:auto;">
+        <img src="{{ get_url(path='img/logo.png', trailing_slash=false) | safe }}" alt="{{ config.title }}" class="header-logo-img">
       </a>
 
-      <button class="nav-toggle" aria-label="Меню"
-        onclick="this.classList.toggle('active');document.querySelector('.nav-menu').classList.toggle('open')">
+      <button class="nav-toggle" aria-label="Меню">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
           <path d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
@@ -61,11 +60,12 @@
           <ul>
             <li><a href="{{ config.base_url }}">Главная</a></li>
             <li><a href="{{ config.base_url }}/products/">Продукция</a></li>
-            <li><a href="{{ config.base_url }}/blog/">Рецепты</a></li>
-            <li><a href="{{ config.base_url }}/o-kompanii/">О компании</a></li>
-            <li><a href="{{ config.base_url }}/kontakty/">Контакты</a></li>
             <li><a href="{{ config.base_url }}/news/">Новости</a></li>
             <li><a href="{{ config.base_url }}/recipes/">Рецепты</a></li>
+            <li><a href="{{ config.base_url }}/o-kompanii/">О компании</a></li>
+            <li><a href="{{ config.base_url }}/kontakty/">Контакты</a></li>
+          </ul>
+        </div>
         <div>
           <h4>Контакты</h4>
           <ul>
@@ -90,14 +90,21 @@
     </div>
   </footer>
 
-  {# ─── Mobile menu click-outside close ──── #}
+  {# ─── Mobile menu toggle & click-outside close ──── #}
   <script>
     document.addEventListener('click', function(e) {
       var toggle = document.querySelector('.nav-toggle');
       var menu = document.querySelector('.nav-menu');
-      if (toggle && menu && !toggle.contains(e.target) && !menu.contains(e.target)) {
-        toggle.classList.remove('active');
-        menu.classList.remove('open');
+      if (toggle && menu) {
+        if (toggle.contains(e.target)) {
+          toggle.classList.toggle('active');
+          menu.classList.toggle('open');
+          return;
+        }
+        if (!menu.contains(e.target)) {
+          toggle.classList.remove('active');
+          menu.classList.remove('open');
+        }
       }
     });
   </script>

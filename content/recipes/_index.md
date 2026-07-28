@@ -9,4 +9,5 @@ insert_anchor_links = "none"
 
 [extra]
 eyebrow = "Рецепты"
+is_recipes = true
 +++

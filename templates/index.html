@@ -47,7 +47,7 @@
     <div class="section-title">
       <p class="eyebrow">Наша продукция</p>
       <h2>Выберите свой вкус</h2>
-      <p class="lead" style="margin:0 auto;">Хрустящие, ароматные, с любовью приготовленные — гренки на любой вкус</p>
+      <p class="lead">Хрустящие, ароматные, с любовью приготовленные — гренки на любой вкус</p>
     </div>
     <div class="product-grid">
       {% for product in products_section.pages %}
@@ -69,7 +69,7 @@
       </article>
       {% endfor %}
     </div>
-    <div style="text-align:center;margin-top:var(--space-8);">
+    <div class="ta-center mt-8">
       <a href="{{ config.base_url }}/products/" class="btn btn-secondary">Вся продукция →</a>
     </div>
   </div>
@@ -123,12 +123,42 @@
       <h2>Как использовать наши гренки</h2>
     </div>
     <div class="uses-grid">
-      <div class="use-card">🍜 Накрошить в гороховый суп</div>
-      <div class="use-card">🥪 Сделать бутерброды</div>
-      <div class="use-card">🥗 Добавить в салатик</div>
-      <div class="use-card">📦 Отложить на чёрный день 😉</div>
-      <div class="use-card">🍿 Вместо попкорна к кино</div>
-      <div class="use-card">🍺 Просто как закуска</div>
+      <div class="use-card">
+        <div class="use-card-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 20c0-8 6-14 16-14s16 6 16 14c0 7-4 13-10 16"/><path d="M8 20c0 7 4 13 10 16"/><path d="M24 6v34"/><path d="M18 38h12"/><path d="M14 42c0-2 4-4 10-4s10 2 10 4"/></svg>
+        </div>
+        <div class="use-card-label">Накрошить в гороховый суп</div>
+      </div>
+      <div class="use-card">
+        <div class="use-card-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14h28v24H10z"/><path d="M14 18h20v16H14z"/><path d="M22 14v24"/><path d="M16 38v6"/><path d="M32 38v6"/></svg>
+        </div>
+        <div class="use-card-label">Сделать бутерброды</div>
+      </div>
+      <div class="use-card">
+        <div class="use-card-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 28c0-8 5-14 12-14s12 6 12 14"/><path d="M12 28c0 6 5 12 12 12s12-6 12-12"/><path d="M16 28c0 5 3 8 8 8s8-3 8-8"/><path d="M20 16C16 8 10 6 6 8"/><path d="M28 16c4-8 10-10 14-8"/></svg>
+        </div>
+        <div class="use-card-label">Добавить в салатик</div>
+      </div>
+      <div class="use-card">
+        <div class="use-card-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="14" width="28" height="24" rx="2"/><path d="M10 20h28"/><path d="M22 14v24"/><path d="M18 14v4"/><path d="M30 14v4"/><path d="M18 34v4"/><path d="M30 34v4"/></svg>
+        </div>
+        <div class="use-card-label">Запас на чёрный день</div>
+      </div>
+      <div class="use-card">
+        <div class="use-card-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 32c0-8 5-14 12-14s12 6 12 14v4H12v-4z"/><path d="M16 32c0-4 3-8 8-8s8 4 8 8"/><path d="M24 18v-4"/><path d="M18 8c-2 3-6 6-6 6"/><path d="M30 8c2 3 6 6 6 6"/></svg>
+        </div>
+        <div class="use-card-label">Вместо попкорна к кино</div>
+      </div>
+      <div class="use-card">
+        <div class="use-card-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 16c4-4 12-4 16 0l4 4c4 4 4 12 0 16"/><path d="M16 32c-4-4-4-12 0-16"/><circle cx="24" cy="24" r="6"/></svg>
+        </div>
+        <div class="use-card-label">Просто как закуска</div>
+      </div>
     </div>
   </div>
 </section>
@@ -137,17 +167,16 @@
 <section class="section">
   <div class="container">
     <div class="section-title">
-      <p class="eyebrow">Блог и рецепты</p>
+      <p class="eyebrow">Рецепты</p>
       <h2>Гренки в каждом блюде</h2>
-      <p class="lead" style="margin:0 auto;">Идеи, рецепты и новости от Уральских гренок</p>
+      <p class="lead">Идеи, рецепты и новости от Уральских гренок</p>
     </div>
     <div class="blog-list">
       {% for post in recipes_section.pages | slice(end=3) %}
       <article class="blog-entry">
         {% if post.extra.image %}
-        <a href="{{ post.permalink }}">
-          <img src="{{ get_url(path='img/' ~ post.extra.image, trailing_slash=false) }}" alt="{{ post.title }}"
-            style="width:100%;max-height:360px;object-fit:cover;border-radius:var(--radius-md);margin-bottom:var(--space-4);box-shadow:var(--elev-raised);" />
+        <a href="{{ post.permalink }}" class="blog-entry-img-link">
+          <img src="{{ get_url(path='img/' ~ post.extra.image, trailing_slash=false) }}" alt="{{ post.title }}" class="blog-entry-img" loading="lazy" />
         </a>
         {% endif %}
         <div class="blog-date">
@@ -155,11 +184,10 @@
         </div>
         <h3><a href="{{ post.permalink }}">{{ post.title }}</a></h3>
         <div class="blog-excerpt">{{ post.description }}</div>
-        <a href="{{ post.permalink }}" style="font-size:var(--text-sm);font-weight:600;">Читать далее →</a>
-      </article>
+        <a href="{{ post.permalink }}" class="blog-read-more">Читать далее →</a>
       {% endfor %}
     </div>
-    <div style="text-align:center;margin-top:var(--space-8);">
+    <div class="ta-center mt-8">
       <a href="{{ config.base_url }}/recipes/" class="btn btn-secondary">Все рецепты →</a>
     </div>
   </div>
@@ -167,7 +195,7 @@
 
 {# ─── CTA ──────────────────────────────── #}
 <section class="section cta-strip">
-  <div class="container" style="max-width: 600px;">
+  <div class="container cta-container">
     <p class="eyebrow">Не упустите</p>
     <h2>Гренки расходятся быстро. Не откладывайте хруст на завтра — закажите сегодня!</h2>
     <a href="{{ config.base_url }}/products/" class="btn btn-primary">Заказать сейчас</a>
