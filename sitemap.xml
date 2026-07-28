@@ -1,58 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="https://urgrenki.ru/sitemap.xsl"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-<url>
-<loc>https://urgrenki.ru/</loc>
-</url>
-<url>
-<loc>https://urgrenki.ru/gorohoviy-sup-s-grenkami/</loc>
-<lastmod>2026-06-02T11:34:41+05:00</lastmod>
-<image:image>
-<image:loc>https://urgrenki.ru/media/posts/4/pea-soup.svg</image:loc>
-<image:title><![CDATA[Гороховый суп с гренками]]></image:title>
-</image:image>
-</url>
-<url>
-<loc>https://urgrenki.ru/grenki-s-adjikoy/</loc>
-<lastmod>2026-06-02T11:34:41+05:00</lastmod>
-<image:image>
-<image:loc>https://urgrenki.ru/media/posts/2/adjika-3.png</image:loc>
-<image:title><![CDATA[]]></image:title>
-</image:image>
-</url>
-<url>
-<loc>https://urgrenki.ru/grenki-s-chesnokom/</loc>
-<lastmod>2026-06-02T11:34:41+05:00</lastmod>
-<image:image>
-<image:loc>https://urgrenki.ru/media/posts/1/chesnok-1.png</image:loc>
-<image:title><![CDATA[]]></image:title>
-</image:image>
-</url>
-<url>
-<loc>https://urgrenki.ru/kontakty/</loc>
-<lastmod>2026-06-02T11:34:41+05:00</lastmod>
-</url>
-<url>
-<loc>https://urgrenki.ru/noviy-vkus-grenki-s-adjikoy/</loc>
-<lastmod>2026-06-02T11:34:41+05:00</lastmod>
-<image:image>
-<image:loc>https://urgrenki.ru/media/posts/5/adjika-3.png</image:loc>
-<image:title><![CDATA[Гренки с аджикой]]></image:title>
-</image:image>
-</url>
-<url>
-<loc>https://urgrenki.ru/o-kompanii/</loc>
-<lastmod>2026-06-30T17:07:37+05:00</lastmod>
-</url>
-<url>
-<loc>https://urgrenki.ru/page/2/</loc>
-</url>
-<url>
-<loc>https://urgrenki.ru/salat-tsezar-s-grenkami/</loc>
-<lastmod>2026-06-02T11:34:41+05:00</lastmod>
-<image:image>
-<image:loc>https://urgrenki.ru/media/posts/3/caesar-salad.svg</image:loc>
-<image:title><![CDATA[Салат Цезарь с гренками]]></image:title>
-</image:image>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://urgrenki.ru/</loc>
+    </url>
+    <url>
+        <loc>https://urgrenki.ru/blog/</loc>
+    </url>
+    <url>
+        <loc>https://urgrenki.ru/kontakty/</loc>
+    </url>
+    <url>
+        <loc>https://urgrenki.ru/o-kompanii/</loc>
+    </url>
+    <url>
+        <loc>https://urgrenki.ru/products/</loc>
+    </url>
+    <url>
+        <loc>https://urgrenki.ru/products/grenki-s-adjikoy/</loc>
+        <lastmod>2024-01-15</lastmod>
+    </url>
+    <url>
+        <loc>https://urgrenki.ru/products/grenki-s-chesnokom/</loc>
+        <lastmod>2024-01-15</lastmod>
+    </url>
+    <url>
+        <loc>https://urgrenki.ru/products/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://urgrenki.ru/tags/</loc>
+    </url>
+    <url>
+        <loc>https://urgrenki.ru/terms-conditions/</loc>
+    </url>
 </urlset>
