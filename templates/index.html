@@ -2,8 +2,8 @@
 
 {% block content %}
 {% set products_section = get_section(path="products/_index.md") %}
-{% set blog_section = get_section(path="blog/_index.md") %}
-
+{% set blog_section = get_section(path="news/_index.md") %}
+{% set recipes_section = get_section(path="recipes/_index.md") %}
 {# ─── Hero ────────────────────────────── #}
 <section class="hero">
   <div class="hero-bg">
@@ -142,7 +142,7 @@
       <p class="lead" style="margin:0 auto;">Идеи, рецепты и новости от Уральских гренок</p>
     </div>
     <div class="blog-list">
-      {% for post in blog_section.pages | slice(end=3) %}
+      {% for post in recipes_section.pages | slice(end=3) %}
       <article class="blog-entry">
         {% if post.extra.image %}
         <a href="{{ post.permalink }}">
@@ -160,7 +160,7 @@
       {% endfor %}
     </div>
     <div style="text-align:center;margin-top:var(--space-8);">
-      <a href="{{ config.base_url }}/blog/" class="btn btn-secondary">Все рецепты →</a>
+      <a href="{{ config.base_url }}/recipes/" class="btn btn-secondary">Все рецепты →</a>
     </div>
   </div>
 </section>
