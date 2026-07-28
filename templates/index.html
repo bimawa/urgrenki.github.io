@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% set products_section = get_section(path="products/_index.md") %}
+{% set blog_section = get_section(path="blog/_index.md") %}
+
+{# ─── Hero ────────────────────────────── #}
+<section class="hero">
+  <div class="hero-bg">
+    <img src="{{ get_url(path="img/banner.png", trailing_slash=false) }}" alt="" aria-hidden="true" />
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <h1>Лучшие Гренки</h1>
+    <p class="lead">100% натуральный состав. Старинные рецепты.</p>
+    <a href="{{ config.base_url }}/products/" class="btn btn-primary">Вся продукция</a>
+  </div>
+</section>
+
+{# ─── О нас ───────────────────────────── #}
+<section class="section">
+  <div class="container about-split">
+    <div class="about-image">
+      <img src="{{ get_url(path="img/about.png", trailing_slash=false) }}" alt="О производстве Уральских гренок" loading="lazy" />
+    </div>
+    <div>
+      <p class="eyebrow">О нас</p>
+      <h2>О нашем продукте</h2>
+      <p class="lead">
+        «Уральские гренки» — это тонкие, хрустящие ломтики чёрного хлеба, обжаренные в свежем растительном масле. Мы восстановили старинные уральские рецепты, проверили их временем и добавили современный контроль качества.
+      </p>
+      <ul class="about-list">
+        <li>Доработанные старинные рецепты, проверенные временем</li>
+        <li>100% натуральный состав — без консервантов и красителей</li>
+        <li>Тщательный контроль качества: от сырья до готового продукта</li>
+        <li>Свежее масло для каждой партии</li>
+        <li>Быстрые сроки доставки по Екатеринбургу и области</li>
+      </ul>
+      <a href="{{ config.base_url }}/o-kompanii/" class="btn btn-secondary">Подробнее о нас</a>
+    </div>
+  </div>
+</section>
+
+{# ─── Продукция ───────────────────────── #}
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-title">
+      <p class="eyebrow">Наша продукция</p>
+      <h2>Выберите свой вкус</h2>
+      <p class="lead" style="margin:0 auto;">Хрустящие, ароматные, с любовью приготовленные — гренки на любой вкус</p>
+    </div>
+    <div class="product-grid">
+      {% for product in products_section.pages %}
+      <article class="product-card">
+        <a href="{{ product.permalink }}" class="product-card-img">
+          <img src="{{ get_url(path='img/products/' ~ product.extra.image, trailing_slash=false) }}" alt="{{ product.title }}" loading="lazy" />
+        </a>
+        <div class="product-card-body">
+          <h3><a href="{{ product.permalink }}">{{ product.title }}</a></h3>
+          <div class="product-card-desc">{{ product.description }}</div>
+          <div class="product-card-footer">
+            <span class="product-card-price">
+              {% if product.extra.old_price %}<span class="product-old-price">{{ product.extra.old_price }} ₽</span>{% endif %}
+              <strong>{{ product.extra.price }} ₽</strong>
+            </span>
+            <a href="{{ product.permalink }}" class="btn btn-primary">Подробнее</a>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    <div style="text-align:center;margin-top:var(--space-8);">
+      <a href="{{ config.base_url }}/products/" class="btn btn-secondary">Вся продукция →</a>
+    </div>
+  </div>
+</section>
+
+{# ─── Ингредиенты ─────────────────────── #}
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <p class="eyebrow">Натуральные ингредиенты</p>
+      <h2>Качество в каждой гренке</h2>
+    </div>
+    <div class="ingredients-grid">
+      <div class="ingredient-card">
+        <div class="ingredient-card-image">
+          <img src="{{ get_url(path="img/material/material-1.png", trailing_slash=false) }}" alt="Зерна" loading="lazy" />
+        </div>
+        <h4>Зерна</h4>
+        <p>Используем только отборные зерна — никаких отходов и второсортного сырья. Наш хлеб начинается с чистого поля.</p>
+      </div>
+      <div class="ingredient-card">
+        <div class="ingredient-card-image">
+          <img src="{{ get_url(path="img/material/material-2.png", trailing_slash=false) }}" alt="Чеснок" loading="lazy" />
+        </div>
+        <h4>Чеснок</h4>
+        <p>Чеснок — русский, ядрёный, с уральских огородов. Он даёт тот самый характерный вкус.</p>
+      </div>
+      <div class="ingredient-card">
+        <div class="ingredient-card-image">
+          <img src="{{ get_url(path="img/material/material-3.png", trailing_slash=false) }}" alt="Перец чили" loading="lazy" />
+        </div>
+        <h4>Перчик Чили</h4>
+        <p>Перец чили приезжает к нам с Кавказа — настоящий, жгучий, с горным характером.</p>
+      </div>
+      <div class="ingredient-card">
+        <div class="ingredient-card-image">
+          <img src="{{ get_url(path="img/material/material-4.png", trailing_slash=false) }}" alt="Хлеб" loading="lazy" />
+        </div>
+        <h4>Хлеб</h4>
+        <p>Хлеб печём по старинным рецептам — ржано-пшеничный, плотный, идеальный для обжарки.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ─── Идеи для гренок ─────────────────── #}
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-title">
+      <p class="eyebrow">Идеи подачи</p>
+      <h2>Как использовать наши гренки</h2>
+    </div>
+    <div class="uses-grid">
+      <div class="use-card">🍜 Накрошить в гороховый суп</div>
+      <div class="use-card">🥪 Сделать бутерброды</div>
+      <div class="use-card">🥗 Добавить в салатик</div>
+      <div class="use-card">📦 Отложить на чёрный день 😉</div>
+      <div class="use-card">🍿 Вместо попкорна к кино</div>
+      <div class="use-card">🍺 Просто как закуска</div>
+    </div>
+  </div>
+</section>
+
+{# ─── Блог ────────────────────────────── #}
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <p class="eyebrow">Блог и рецепты</p>
+      <h2>Гренки в каждом блюде</h2>
+      <p class="lead" style="margin:0 auto;">Идеи, рецепты и новости от Уральских гренок</p>
+    </div>
+    <div class="blog-list">
+      {% for post in blog_section.pages | slice(end=3) %}
+      <article class="blog-entry">
+        {% if post.extra.image %}
+        <a href="{{ post.permalink }}">
+          <img src="{{ get_url(path='img/' ~ post.extra.image, trailing_slash=false) }}" alt="{{ post.title }}"
+            style="width:100%;max-height:360px;object-fit:cover;border-radius:var(--radius-md);margin-bottom:var(--space-4);box-shadow:var(--elev-raised);" />
+        </a>
+        {% endif %}
+        <div class="blog-date">
+          <time datetime="{{ post.date }}">{{ post.date }}</time>
+        </div>
+        <h3><a href="{{ post.permalink }}">{{ post.title }}</a></h3>
+        <div class="blog-excerpt">{{ post.description }}</div>
+        <a href="{{ post.permalink }}" style="font-size:var(--text-sm);font-weight:600;">Читать далее →</a>
+      </article>
+      {% endfor %}
+    </div>
+    <div style="text-align:center;margin-top:var(--space-8);">
+      <a href="{{ config.base_url }}/blog/" class="btn btn-secondary">Все рецепты →</a>
+    </div>
+  </div>
+</section>
+
+{# ─── CTA ──────────────────────────────── #}
+<section class="section cta-strip">
+  <div class="container" style="max-width: 600px;">
+    <p class="eyebrow">Не упустите</p>
+    <h2>Гренки расходятся быстро. Не откладывайте хруст на завтра — закажите сегодня!</h2>
+    <a href="{{ config.base_url }}/products/" class="btn btn-primary">Заказать сейчас</a>
+  </div>
+</section>
+{% endblock content %}

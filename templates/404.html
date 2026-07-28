@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-404">
+  <div class="container">
+    <h1>404</h1>
+    <p>Страница не найдена</p>
+    <p style="color:var(--fg-2);margin-bottom:var(--space-8);">Возможно, страница была удалена или ссылка некорректна.</p>
+    <a href="{{ config.base_url }}" class="btn btn-primary">На главную</a>
+  </div>
+</section>
+{% endblock content %}

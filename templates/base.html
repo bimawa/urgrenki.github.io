@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{%- block title %}{{ config.title }}{% endblock title -%}</title>
+  <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+
+  <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍞</text></svg>">
+
+  <link rel="stylesheet" href="{{ get_url(path='style.css', trailing_slash=false) | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path='main.css', trailing_slash=false) | safe }}">
+
+  {% block extra_head %}{% endblock extra_head %}
+</head>
+<body class="{% block body_class %}{% endblock body_class %}">
+
+  {# ─── Header ───────────────────────────── #}
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a href="{{ config.base_url }}" class="header-logo">
+        <img src="{{ get_url(path='img/logo.png', trailing_slash=false) | safe }}" alt="{{ config.title }}" style="height:48px;width:auto;">
+      </a>
+
+      <button class="nav-toggle" aria-label="Меню"
+        onclick="this.classList.toggle('active');document.querySelector('.nav-menu').classList.toggle('open')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <nav role="navigation" aria-label="Основное меню">
+        <ul class="nav-menu">
+          <li><a href="{{ config.base_url }}" class="nav-link">Главная</a></li>
+          <li><a href="{{ config.base_url }}/products/" class="nav-link">Продукция</a></li>
+          <li><a href="{{ config.base_url }}/blog/" class="nav-link">Рецепты</a></li>
+          <li><a href="{{ config.base_url }}/o-kompanii/" class="nav-link">О компании</a></li>
+          <li><a href="{{ config.base_url }}/kontakty/" class="nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  {# ─── Main Content ─────────────────────── #}
+  <main>
+    {% block content %}{% endblock content %}
+  </main>
+
+  {# ─── Footer ───────────────────────────── #}
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>{{ config.title }}</h4>
+          <p>Натуральные гренки из отборного чёрного хлеба. Старинные рецепты, 100% натуральный состав, никаких консервантов.</p>
+        </div>
+        <div>
+          <h4>Быстрые ссылки</h4>
+          <ul>
+            <li><a href="{{ config.base_url }}">Главная</a></li>
+            <li><a href="{{ config.base_url }}/products/">Продукция</a></li>
+            <li><a href="{{ config.base_url }}/blog/">Рецепты</a></li>
+            <li><a href="{{ config.base_url }}/o-kompanii/">О компании</a></li>
+            <li><a href="{{ config.base_url }}/kontakty/">Контакты</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Контакты</h4>
+          <ul>
+            <li><a href="tel:{{ config.extra.phone_clean }}">{{ config.extra.phone }}</a></li>
+            <li><a href="mailto:{{ config.extra.email }}">{{ config.extra.email }}</a></li>
+            <li>{{ config.extra.address }}</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Принимаем</h4>
+          <ul>
+            <li>Наличные</li>
+            <li>Банковский перевод</li>
+            <li>СБП</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>{{ config.extra.footer_copyright }}</span>
+        <span>Екатеринбург, Россия</span>
+      </div>
+    </div>
+  </footer>
+
+  {# ─── Mobile menu click-outside close ──── #}
+  <script>
+    document.addEventListener('click', function(e) {
+      var toggle = document.querySelector('.nav-toggle');
+      var menu = document.querySelector('.nav-menu');
+      if (toggle && menu && !toggle.contains(e.target) && !menu.contains(e.target)) {
+        toggle.classList.remove('active');
+        menu.classList.remove('open');
+      }
+    });
+  </script>
+  {% block extra_scripts %}{% endblock extra_scripts %}
+</body>
+</html>

@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <p class="eyebrow">{{ section.extra.eyebrow | default(value="") }}</p>
+      <h1>{{ section.title }}</h1>
+      {% if section.description %}<p class="lead" style="margin:0 auto;">{{ section.description }}</p>{% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {% if section.extra.is_products %}
+      <div class="product-grid">
+        {% for page in paginator.pages %}
+        <article class="product-card">
+          <a href="{{ page.permalink }}" class="product-card-img">
+            <img src="{{ get_url(path='img/products/' ~ page.extra.image, trailing_slash=false) }}" alt="{{ page.title }}" loading="lazy">
+          </a>
+          <div class="product-card-body">
+            <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
+            <div class="product-card-desc">{{ page.description }}</div>
+            <div class="product-card-footer">
+              <span class="product-card-price">
+                {% if page.extra.old_price %}<span class="product-old-price">{{ page.extra.old_price }} ₽</span>{% endif %}
+                <strong>{{ page.extra.price }} ₽</strong>
+              </span>
+              <a href="{{ page.permalink }}" class="btn btn-primary">Подробнее</a>
+            </div>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="blog-list">
+        {% for page in paginator.pages %}
+        <article class="blog-entry">
+          {% if page.extra.image %}
+          <a href="{{ page.permalink }}">
+            <img src="{{ get_url(path='img/' ~ page.extra.image, trailing_slash=false) }}" alt="{{ page.title }}"
+              style="width:100%;max-height:360px;object-fit:cover;border-radius:var(--radius-md);margin-bottom:var(--space-4);box-shadow:var(--elev-raised);">
+          </a>
+          {% endif %}
+          <div class="blog-date">
+            <time datetime="{{ page.date }}">{{ page.date }}</time>
+            {% if page.extra.author %} · {{ page.extra.author }}{% endif %}
+          </div>
+          <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
+          <div class="blog-excerpt">{{ page.description }}</div>
+          <a href="{{ page.permalink }}" style="font-size:var(--text-sm);font-weight:600;">Читать далее →</a>
+        </article>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% if paginator.previous or paginator.next %}
+<nav class="pagination">
+  {% if paginator.previous %}<a href="{{ paginator.previous }}">← Назад</a>{% endif %}
+  {% if paginator.next %}<a href="{{ paginator.next }}">Вперед →</a>{% endif %}
+</nav>
+{% endif %}
+{% endblock content %}

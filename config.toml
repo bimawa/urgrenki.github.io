@@ -1,143 +1,26 @@
-######################## default configuration ####################
-baseURL = "https://urgrenki.ru"
-languageCode = "ru"
+# Zola configuration — Уральские гренки
+base_url = "https://urgrenki.ru"
 title = "Уральские гренки"
-theme = "hargo"
-summaryLength = "20"
-paginate = 10
-disqusShortname = ""
+description = "Натуральные гренки из отборного чёрного хлеба. Старинные рецепты, 100% натуральный состав."
+default_language = "ru"
+compile_sass = false
+build_search_index = false
 
-############################# Plugins ##############################
-[params.plugins]
+# Taxonomies
+taxonomies = [
+    { name = "tags", feed = true },
+]
 
-  # CSS Plugins
-  [[params.plugins.css]]
-  link = "plugins/bootstrap/bootstrap.min.css"
-  [[params.plugins.css]]
-  link = "plugins/slick/slick.css"
-  [[params.plugins.css]]
-  link = "plugins/themify-icons/themify-icons.css"
-
-  # JS Plugins
-  [[params.plugins.js]]
-  link = "plugins/jQuery/jquery.min.js"
-  [[params.plugins.js]]
-  link = "plugins/bootstrap/bootstrap.min.js"
-  [[params.plugins.js]]
-  link = "plugins/slick/slick.min.js"
-  [[params.plugins.js]]
-  link = "plugins/google-map/gmap.js"
-
-
-############################## navigation ###############################
-[menu]
-
-  [[menu.main]]
-  name = "Продукция"
-  URL = "products"
-  weight = 1
-
-  # [[menu.main]]
-  # name = "Рецепты"
-  # URL = "recept"
-  # weight = 2
-
-  # [[menu.main]]
-  # name = "Как заказать"
-  # URL = "zakazat"
-  # weight = 3
-
-
-  [[menu.main]]
-  name = "Контакты"
-  URL = "contact"
-  weight = 4
-
-  ############# footer menu #############
-  [[menu.footer]]
-  name = "Продукция"
-  URL = "products"
-  weight = 1
-
-  [[menu.footer]]
-  name = "Рецепты"
-  URL = "recept"
-  weight = 2
-
-  [[menu.footer]]
-  name = "Как заказать"
-  URL = "zakazat"
-  weight = 3
-
-
-  [[menu.footer]]
-  name = "Пользовательское соглашение"
-  URL = "terms-conditions"
-  weight = 4
-
-  [[menu.footer]]
-  name = "Контакты"
-  URL = "contact"
-  weight = 5
-
-
-#################### default parameters ################################
-[params]
-logo = "images/logo.png"
-home = "О нас"
-# Meta data
-description = "Лучшие гренки России"
-author = "Themefisher"
-# google map
-gmapAPI = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"
-mapLatitude = "56.792015"
-mapLongitude = "60.606997"
-mapMarker = "images/marker.png"
-# Google Analitycs
-googleAnalitycsID = "" # Your ID
-# Contact Information
-mobile = "83433022565"
+# Markdown config
+[markdown]
+render_emoji = true
+# Extra config (accessed via config.extra in templates)
+[extra]
+phone = "+7 (343) 302-25-65"
+phone_clean = "+73433022565"
 email = "mail@urgrenki.ru"
-location = "Екатеринбург, Россия, 8 марта"
-# copyright
-copyright = "| Copyright &copy; 2021 [Gethugothemes](https://gethugothemes.com) All Rights Reserved |"
-# Snipcart Credentials
-snipcartApiKey = "M2E5YjA3NjMtYzRiYS00YzVjLWEyYWYtNDY5ZDI0OWZhYjg5"
-currencySymbol = "₽"
+address = "Екатеринбург, Россия, 8 марта"
+footer_copyright = "© Уральские гренки"
 
-  # Preloader
-  [params.preloader]
-  enable = true
-  preloader = "" # use .png , .svg or .gif format
-
-  # Product Rating
-  # it works with https://rating-widget.com/ , you will get the ID and publicKey after creating your account there.
-  [params.rating]
-  enable = false
-  websiteID = "444334"
-  publicKey = "811cf0927332bf51f2e12f84608594ac"
-
-  # Social Site
-  [[params.social]]
-  icon = "ti-facebook"
-  link = "#"
-
-  [[params.social]]
-  icon = "ti-twitter-alt"
-  link = "#"
-
-  [[params.social]]
-  icon = "ti-youtube"
-  link = "#"
-
-  [[params.social]]
-  icon = "ti-instagram"
-  link = "#"
-
-  [[params.social]]
-  icon = "ti-pinterest"
-  link = "#"
-
-  # Contact Form
-  [params.contact]
-  formAction = "#" # contact form works with formspree.io
+# Theme (empty = use root templates/static directly)
+theme = ""

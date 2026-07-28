@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% set image_path = "img/products/" ~ page.extra.image %}
+
+<article>
+  <section class="section" style="padding-bottom:0;">
+    <div class="container">
+      <p class="eyebrow"><a href="{{ config.base_url }}/products/" style="color:inherit;">← Каталог</a></p>
+      <div class="product-single">
+        <div class="product-gallery">
+          <div class="product-gallery-main">
+            <img src="{{ get_url(path=image_path, trailing_slash=false) }}" alt="{{ page.title }}" loading="eager">
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="eyebrow">Продукция</p>
+          <h1>{{ page.title }}</h1>
+          <div class="price-block">
+            {% if page.extra.old_price %}<span class="price-old">{{ page.extra.old_price }} ₽</span>{% endif %}
+            <span class="price">{{ page.extra.price }} ₽</span>
+            {% if page.extra.old_price %}<span class="price-badge">−50%</span>{% endif %}
+          </div>
+          <dl class="product-meta">
+            <dt>Вес</dt>
+            <dd>{{ page.extra.weight | default(value="100 г") }}</dd>
+            <dt>Состав</dt>
+            <dd>{{ page.extra.ingredients | default(value="Хлеб ржано-пшеничный, чеснок, соль, масло растительное") }}</dd>
+            <dt>Срок хранения</dt>
+            <dd>120 дней</dd>
+            <dt>Условия хранения</dt>
+            <dd>В сухом прохладном месте</dd>
+          </dl>
+          <a href="tel:{{ config.extra.phone_clean }}" class="btn btn-primary" style="width:100%;justify-content:center;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;flex-shrink:0;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            Заказать по телефону
+          </a>
+          <p style="font-size:var(--text-sm);color:var(--muted);text-align:center;margin-top:var(--space-2);">или напишите: <a href="mailto:{{ config.extra.email }}">{{ config.extra.email }}</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section product-description">
+    <div class="container">
+      <h2 class="section-title">Описание</h2>
+      <div class="page-content">
+        {{ page.content | safe }}
+      </div>
+    </div>
+  </section>
+</article>
+{% endblock content %}

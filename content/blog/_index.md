@@ -1,6 +1,12 @@
----
-title: "Новости"
-date: 2019-10-17T11:22:16+06:00
-draft: false
-description : "this is a meta description"
----
++++
+title = "Блог и рецепты"
+description = "Идеи, рецепты и новости от Уральских гренок"
+sort_by = "date"
+template = "section.html"
+page_template = "post.html"
+paginate_by = 6
+insert_anchor_links = "none"
+
+[extra]
+eyebrow = "Блог и рецепты"
++++
