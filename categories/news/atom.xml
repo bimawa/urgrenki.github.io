@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru">
+    <title>Уральские гренки - news</title>
+    <subtitle>Натуральные гренки из отборного чёрного хлеба. Старинные рецепты, 100% натуральный состав.</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://urgrenki.ru/categories/news/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://urgrenki.ru"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-06-02T00:00:00+00:00</updated>
+    <id>https://urgrenki.ru/categories/news/atom.xml</id>
+    <entry xml:lang="ru">
+        <title>Новый вкус: гренки с аджикой уже в продаже!</title>
+        <published>2026-06-02T00:00:00+00:00</published>
+        <updated>2026-06-02T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://urgrenki.ru/news/noviy-vkus-grenki-s-adjikoy/"/>
+        <id>https://urgrenki.ru/news/noviy-vkus-grenki-s-adjikoy/</id>
+        
+        <content type="html" xml:base="https://urgrenki.ru/news/noviy-vkus-grenki-s-adjikoy/">&lt;p&gt;Друзья, у нас отличная новость! Мы запускаем новый вкус — &lt;strong&gt;гренки с аджикой&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;pochemu-adzhika&quot;&gt;Почему аджика?&lt;&#x2F;h2&gt;
+&lt;p&gt;Аджика — это не просто острая приправа. Настоящая абхазская аджика — это сложный букет из перца чили, чеснока, кориандра и других пряностей. Мы долго искали идеальный рецепт и наконец нашли тот самый баланс.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;chto-vnutri&quot;&gt;Что внутри?&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Чёрный ржано-пшеничный хлеб по старинному рецепту&lt;&#x2F;li&gt;
+&lt;li&gt;Домашняя аджика с кавказским характером&lt;&#x2F;li&gt;
+&lt;li&gt;Натуральное растительное масло&lt;&#x2F;li&gt;
+&lt;li&gt;Никаких консервантов и усилителей вкуса&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;kharakteristiki&quot;&gt;Характеристики&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Вес: &lt;strong&gt;90 г&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Срок хранения: &lt;strong&gt;120 дней&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Цена: &lt;strong&gt;99 ₽&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Попробуйте новый вкус — гренки с аджикой уже в продаже! Заказать можно по телефону &lt;strong&gt;+7 (343) 302-25-65&lt;&#x2F;strong&gt; или по email &lt;strong&gt;mail@urgrenki.ru&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

@@ -4,10 +4,26 @@
         <loc>https://urgrenki.ru/</loc>
     </url>
     <url>
-        <loc>https://urgrenki.ru/blog/</loc>
+        <loc>https://urgrenki.ru/categories/</loc>
+    </url>
+    <url>
+        <loc>https://urgrenki.ru/categories/news/</loc>
+    </url>
+    <url>
+        <loc>https://urgrenki.ru/categories/recipes/</loc>
     </url>
     <url>
         <loc>https://urgrenki.ru/kontakty/</loc>
+    </url>
+    <url>
+        <loc>https://urgrenki.ru/news/</loc>
+    </url>
+    <url>
+        <loc>https://urgrenki.ru/news/noviy-vkus-grenki-s-adjikoy/</loc>
+        <lastmod>2026-06-02</lastmod>
+    </url>
+    <url>
+        <loc>https://urgrenki.ru/news/page/1/</loc>
     </url>
     <url>
         <loc>https://urgrenki.ru/o-kompanii/</loc>
@@ -25,6 +41,20 @@
     </url>
     <url>
         <loc>https://urgrenki.ru/products/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://urgrenki.ru/recipes/</loc>
+    </url>
+    <url>
+        <loc>https://urgrenki.ru/recipes/gorohoviy-sup-s-grenkami/</loc>
+        <lastmod>2026-06-02</lastmod>
+    </url>
+    <url>
+        <loc>https://urgrenki.ru/recipes/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://urgrenki.ru/recipes/salat-tsezar-s-grenkami/</loc>
+        <lastmod>2026-06-02</lastmod>
     </url>
     <url>
         <loc>https://urgrenki.ru/tags/</loc>

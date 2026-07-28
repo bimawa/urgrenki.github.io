@@ -20,11 +20,10 @@
   <header class="header" role="banner">
     <div class="container header-inner">
       <a href="https:&#x2F;&#x2F;urgrenki.ru" class="header-logo">
-        <img src="https://urgrenki.ru/img/logo.png" alt="Уральские гренки" style="height:48px;width:auto;">
+        <img src="https://urgrenki.ru/img/logo.png" alt="Уральские гренки" class="header-logo-img">
       </a>
 
-      <button class="nav-toggle" aria-label="Меню"
-        onclick="this.classList.toggle('active');document.querySelector('.nav-menu').classList.toggle('open')">
+      <button class="nav-toggle" aria-label="Меню">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
           <path d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
@@ -34,7 +33,8 @@
         <ul class="nav-menu">
           <li><a href="https:&#x2F;&#x2F;urgrenki.ru" class="nav-link">Главная</a></li>
           <li><a href="https:&#x2F;&#x2F;urgrenki.ru/products/" class="nav-link">Продукция</a></li>
-          <li><a href="https:&#x2F;&#x2F;urgrenki.ru/blog/" class="nav-link">Рецепты</a></li>
+          <li><a href="https:&#x2F;&#x2F;urgrenki.ru/news/" class="nav-link">Новости</a></li>
+          <li><a href="https:&#x2F;&#x2F;urgrenki.ru/recipes/" class="nav-link">Рецепты</a></li>
           <li><a href="https:&#x2F;&#x2F;urgrenki.ru/o-kompanii/" class="nav-link">О компании</a></li>
           <li><a href="https:&#x2F;&#x2F;urgrenki.ru/kontakty/" class="nav-link">Контакты</a></li>
         </ul>
@@ -91,7 +91,7 @@
     <div class="section-title">
       <p class="eyebrow">Наша продукция</p>
       <h2>Выберите свой вкус</h2>
-      <p class="lead" style="margin:0 auto;">Хрустящие, ароматные, с любовью приготовленные — гренки на любой вкус</p>
+      <p class="lead">Хрустящие, ароматные, с любовью приготовленные — гренки на любой вкус</p>
     </div>
     <div class="product-grid">
       
@@ -130,7 +130,7 @@
       </article>
       
     </div>
-    <div style="text-align:center;margin-top:var(--space-8);">
+    <div class="ta-center mt-8">
       <a href="https:&#x2F;&#x2F;urgrenki.ru/products/" class="btn btn-secondary">Вся продукция →</a>
     </div>
   </div>
@@ -184,12 +184,42 @@
       <h2>Как использовать наши гренки</h2>
     </div>
     <div class="uses-grid">
-      <div class="use-card">🍜 Накрошить в гороховый суп</div>
-      <div class="use-card">🥪 Сделать бутерброды</div>
-      <div class="use-card">🥗 Добавить в салатик</div>
-      <div class="use-card">📦 Отложить на чёрный день 😉</div>
-      <div class="use-card">🍿 Вместо попкорна к кино</div>
-      <div class="use-card">🍺 Просто как закуска</div>
+      <div class="use-card">
+        <div class="use-card-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 20c0-8 6-14 16-14s16 6 16 14c0 7-4 13-10 16"/><path d="M8 20c0 7 4 13 10 16"/><path d="M24 6v34"/><path d="M18 38h12"/><path d="M14 42c0-2 4-4 10-4s10 2 10 4"/></svg>
+        </div>
+        <div class="use-card-label">Накрошить в гороховый суп</div>
+      </div>
+      <div class="use-card">
+        <div class="use-card-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14h28v24H10z"/><path d="M14 18h20v16H14z"/><path d="M22 14v24"/><path d="M16 38v6"/><path d="M32 38v6"/></svg>
+        </div>
+        <div class="use-card-label">Сделать бутерброды</div>
+      </div>
+      <div class="use-card">
+        <div class="use-card-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 28c0-8 5-14 12-14s12 6 12 14"/><path d="M12 28c0 6 5 12 12 12s12-6 12-12"/><path d="M16 28c0 5 3 8 8 8s8-3 8-8"/><path d="M20 16C16 8 10 6 6 8"/><path d="M28 16c4-8 10-10 14-8"/></svg>
+        </div>
+        <div class="use-card-label">Добавить в салатик</div>
+      </div>
+      <div class="use-card">
+        <div class="use-card-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="14" width="28" height="24" rx="2"/><path d="M10 20h28"/><path d="M22 14v24"/><path d="M18 14v4"/><path d="M30 14v4"/><path d="M18 34v4"/><path d="M30 34v4"/></svg>
+        </div>
+        <div class="use-card-label">Запас на чёрный день</div>
+      </div>
+      <div class="use-card">
+        <div class="use-card-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 32c0-8 5-14 12-14s12 6 12 14v4H12v-4z"/><path d="M16 32c0-4 3-8 8-8s8 4 8 8"/><path d="M24 18v-4"/><path d="M18 8c-2 3-6 6-6 6"/><path d="M30 8c2 3 6 6 6 6"/></svg>
+        </div>
+        <div class="use-card-label">Вместо попкорна к кино</div>
+      </div>
+      <div class="use-card">
+        <div class="use-card-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 16c4-4 12-4 16 0l4 4c4 4 4 12 0 16"/><path d="M16 32c-4-4-4-12 0-16"/><circle cx="24" cy="24" r="6"/></svg>
+        </div>
+        <div class="use-card-label">Просто как закуска</div>
+      </div>
     </div>
   </div>
 </section>
@@ -198,22 +228,48 @@
 <section class="section">
   <div class="container">
     <div class="section-title">
-      <p class="eyebrow">Блог и рецепты</p>
+      <p class="eyebrow">Рецепты</p>
       <h2>Гренки в каждом блюде</h2>
-      <p class="lead" style="margin:0 auto;">Идеи, рецепты и новости от Уральских гренок</p>
+      <p class="lead">Идеи, рецепты и новости от Уральских гренок</p>
     </div>
     <div class="blog-list">
       
+      <article class="blog-entry">
+        
+        <a href="https:&#x2F;&#x2F;urgrenki.ru&#x2F;recipes&#x2F;gorohoviy-sup-s-grenkami&#x2F;" class="blog-entry-img-link">
+          <img src="https://urgrenki.ru/img/recipes/pea-soup.svg" alt="Гороховый суп с гренками" class="blog-entry-img" loading="lazy" />
+        </a>
+        
+        <div class="blog-date">
+          <time datetime="2026-06-02">2026-06-02</time>
+        </div>
+        <h3><a href="https:&#x2F;&#x2F;urgrenki.ru&#x2F;recipes&#x2F;gorohoviy-sup-s-grenkami&#x2F;">Гороховый суп с гренками</a></h3>
+        <div class="blog-excerpt">Сытный гороховый суп с копченостями и хрустящими гренками. Простой пошаговый рецепт для всей семьи.</div>
+        <a href="https:&#x2F;&#x2F;urgrenki.ru&#x2F;recipes&#x2F;gorohoviy-sup-s-grenkami&#x2F;" class="blog-read-more">Читать далее →</a>
+      
+      <article class="blog-entry">
+        
+        <a href="https:&#x2F;&#x2F;urgrenki.ru&#x2F;recipes&#x2F;salat-tsezar-s-grenkami&#x2F;" class="blog-entry-img-link">
+          <img src="https://urgrenki.ru/img/recipes/caesar-salad.svg" alt="Салат Цезарь с гренками" class="blog-entry-img" loading="lazy" />
+        </a>
+        
+        <div class="blog-date">
+          <time datetime="2026-06-02">2026-06-02</time>
+        </div>
+        <h3><a href="https:&#x2F;&#x2F;urgrenki.ru&#x2F;recipes&#x2F;salat-tsezar-s-grenkami&#x2F;">Салат Цезарь с гренками</a></h3>
+        <div class="blog-excerpt">Классический салат Цезарь с хрустящими Уральскими гренками. Простой рецепт с курицей, пармезаном и ароматными гренками.</div>
+        <a href="https:&#x2F;&#x2F;urgrenki.ru&#x2F;recipes&#x2F;salat-tsezar-s-grenkami&#x2F;" class="blog-read-more">Читать далее →</a>
+      
     </div>
-    <div style="text-align:center;margin-top:var(--space-8);">
-      <a href="https:&#x2F;&#x2F;urgrenki.ru/blog/" class="btn btn-secondary">Все рецепты →</a>
+    <div class="ta-center mt-8">
+      <a href="https:&#x2F;&#x2F;urgrenki.ru/recipes/" class="btn btn-secondary">Все рецепты →</a>
     </div>
   </div>
 </section>
 
 
 <section class="section cta-strip">
-  <div class="container" style="max-width: 600px;">
+  <div class="container cta-container">
     <p class="eyebrow">Не упустите</p>
     <h2>Гренки расходятся быстро. Не откладывайте хруст на завтра — закажите сегодня!</h2>
     <a href="https:&#x2F;&#x2F;urgrenki.ru/products/" class="btn btn-primary">Заказать сейчас</a>
@@ -235,7 +291,8 @@
           <ul>
             <li><a href="https:&#x2F;&#x2F;urgrenki.ru">Главная</a></li>
             <li><a href="https:&#x2F;&#x2F;urgrenki.ru/products/">Продукция</a></li>
-            <li><a href="https:&#x2F;&#x2F;urgrenki.ru/blog/">Рецепты</a></li>
+            <li><a href="https:&#x2F;&#x2F;urgrenki.ru/news/">Новости</a></li>
+            <li><a href="https:&#x2F;&#x2F;urgrenki.ru/recipes/">Рецепты</a></li>
             <li><a href="https:&#x2F;&#x2F;urgrenki.ru/o-kompanii/">О компании</a></li>
             <li><a href="https:&#x2F;&#x2F;urgrenki.ru/kontakty/">Контакты</a></li>
           </ul>
@@ -269,9 +326,16 @@
     document.addEventListener('click', function(e) {
       var toggle = document.querySelector('.nav-toggle');
       var menu = document.querySelector('.nav-menu');
-      if (toggle && menu && !toggle.contains(e.target) && !menu.contains(e.target)) {
-        toggle.classList.remove('active');
-        menu.classList.remove('open');
+      if (toggle && menu) {
+        if (toggle.contains(e.target)) {
+          toggle.classList.toggle('active');
+          menu.classList.toggle('open');
+          return;
+        }
+        if (!menu.contains(e.target)) {
+          toggle.classList.remove('active');
+          menu.classList.remove('open');
+        }
       }
     });
   </script>

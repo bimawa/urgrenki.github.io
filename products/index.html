@@ -20,11 +20,10 @@
   <header class="header" role="banner">
     <div class="container header-inner">
       <a href="https:&#x2F;&#x2F;urgrenki.ru" class="header-logo">
-        <img src="https://urgrenki.ru/img/logo.png" alt="Уральские гренки" style="height:48px;width:auto;">
+        <img src="https://urgrenki.ru/img/logo.png" alt="Уральские гренки" class="header-logo-img">
       </a>
 
-      <button class="nav-toggle" aria-label="Меню"
-        onclick="this.classList.toggle('active');document.querySelector('.nav-menu').classList.toggle('open')">
+      <button class="nav-toggle" aria-label="Меню">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
           <path d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
@@ -34,7 +33,8 @@
         <ul class="nav-menu">
           <li><a href="https:&#x2F;&#x2F;urgrenki.ru" class="nav-link">Главная</a></li>
           <li><a href="https:&#x2F;&#x2F;urgrenki.ru/products/" class="nav-link">Продукция</a></li>
-          <li><a href="https:&#x2F;&#x2F;urgrenki.ru/blog/" class="nav-link">Рецепты</a></li>
+          <li><a href="https:&#x2F;&#x2F;urgrenki.ru/news/" class="nav-link">Новости</a></li>
+          <li><a href="https:&#x2F;&#x2F;urgrenki.ru/recipes/" class="nav-link">Рецепты</a></li>
           <li><a href="https:&#x2F;&#x2F;urgrenki.ru/o-kompanii/" class="nav-link">О компании</a></li>
           <li><a href="https:&#x2F;&#x2F;urgrenki.ru/kontakty/" class="nav-link">Контакты</a></li>
         </ul>
@@ -50,7 +50,7 @@
     <div class="section-title">
       <p class="eyebrow">Каталог продукции</p>
       <h1>Продукция</h1>
-      <p class="lead" style="margin:0 auto;">Натуральные гренки из отборного чёрного хлеба. Старинные рецепты, 100% натуральный состав.</p>
+      <p class="lead">Натуральные гренки из отборного чёрного хлеба. Старинные рецепты, 100% натуральный состав.</p>
     </div>
   </div>
 </section>
@@ -116,7 +116,8 @@
           <ul>
             <li><a href="https:&#x2F;&#x2F;urgrenki.ru">Главная</a></li>
             <li><a href="https:&#x2F;&#x2F;urgrenki.ru/products/">Продукция</a></li>
-            <li><a href="https:&#x2F;&#x2F;urgrenki.ru/blog/">Рецепты</a></li>
+            <li><a href="https:&#x2F;&#x2F;urgrenki.ru/news/">Новости</a></li>
+            <li><a href="https:&#x2F;&#x2F;urgrenki.ru/recipes/">Рецепты</a></li>
             <li><a href="https:&#x2F;&#x2F;urgrenki.ru/o-kompanii/">О компании</a></li>
             <li><a href="https:&#x2F;&#x2F;urgrenki.ru/kontakty/">Контакты</a></li>
           </ul>
@@ -150,9 +151,16 @@
     document.addEventListener('click', function(e) {
       var toggle = document.querySelector('.nav-toggle');
       var menu = document.querySelector('.nav-menu');
-      if (toggle && menu && !toggle.contains(e.target) && !menu.contains(e.target)) {
-        toggle.classList.remove('active');
-        menu.classList.remove('open');
+      if (toggle && menu) {
+        if (toggle.contains(e.target)) {
+          toggle.classList.toggle('active');
+          menu.classList.toggle('open');
+          return;
+        }
+        if (!menu.contains(e.target)) {
+          toggle.classList.remove('active');
+          menu.classList.remove('open');
+        }
       }
     });
   </script>
