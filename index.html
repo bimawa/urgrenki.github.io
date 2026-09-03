@@ -11,6 +11,10 @@
 
   <link rel="stylesheet" href="https://urgrenki.ru/style.css">
   <link rel="stylesheet" href="https://urgrenki.ru/main.css">
+  <link rel="stylesheet" href="https://urgrenki.ru/landing.css">
+  <link rel="stylesheet" href="https://urgrenki.ru/cta.css">
+
+  
 
   
 </head>
@@ -23,14 +27,14 @@
         <img src="https://urgrenki.ru/img/logo.png" alt="Уральские гренки" class="header-logo-img">
       </a>
 
-      <button class="nav-toggle" aria-label="Меню">
+      <button class="nav-toggle" aria-label="Меню" aria-expanded="false" aria-controls="site-menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
           <path d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
 
       <nav role="navigation" aria-label="Основное меню">
-        <ul class="nav-menu">
+        <ul class="nav-menu" id="site-menu">
           
           <li><a href="https:&#x2F;&#x2F;urgrenki.ru" class="nav-link">Главная</a></li>
           <li><a href="https:&#x2F;&#x2F;urgrenki.ru/products/" class="nav-link">Продукция</a></li>
@@ -40,6 +44,15 @@
           <li><a href="https:&#x2F;&#x2F;urgrenki.ru/kontakty/" class="nav-link">Контакты</a></li>
         </ul>
       </nav>
+
+      <div class="header-cta">
+        <span class="header-cta-phone">+7 (343) 302-25-65</span>
+        <a href="tel:+73433022565" class="btn btn-primary header-cta-call">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>Позвонить</span>
+        </a>
+        <button type="button" class="btn btn-secondary header-cta-callback" data-callback data-goal="header_callback">Заказать звонок</button>
+      </div>
     </div>
   </header>
 
@@ -56,9 +69,50 @@
   </div>
   <div class="hero-overlay"></div>
   <div class="container hero-content">
-    <h1>Лучшие Гренки</h1>
-    <p class="lead">100% натуральный состав. Старинные рецепты.</p>
-    <a href="https:&#x2F;&#x2F;urgrenki.ru/products/" class="btn btn-primary">Вся продукция</a>
+    <p class="eyebrow">Семейное производство · Екатеринбург</p>
+    <h1>Натуральные гренки из чёрного хлеба от 99 ₽</h1>
+    <p class="lead">Тонкие, хрустящие, по старинным уральским рецептам. 100% натуральный состав — без консервантов и усилителей вкуса. Опт и розница, доставка по Екатеринбургу и области.</p>
+    <div class="hero-actions">
+      <button type="button" class="btn btn-primary" data-callback data-goal="hero_callback">Заказать звонок</button>
+      <a href="https:&#x2F;&#x2F;urgrenki.ru/products/" class="hero-catalog-link">Смотреть продукцию →</a>
+    </div>
+    <a href="tel:+73433022565" class="hero-phone">Или позвоните: +7 (343) 302-25-65</a>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <p class="eyebrow">Заказ и доставка</p>
+      <h2>Как купить наши гренки</h2>
+    </div>
+    <div class="grid-3 how-buy-grid">
+      <article class="how-buy-card card">
+        <div class="how-buy-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7V6a6 6 0 1112 0v1"/><path d="M4 7h16l-1 13H5L4 7z"/><path d="M12 11v4"/></svg>
+        </div>
+        <h3>Розница</h3>
+        <p>99 ₽ за пачку (100 г): заказ по телефону или email</p>
+        <a href="tel:+73433022565" class="how-buy-action">Заказать по телефону</a>
+      </article>
+      <article class="how-buy-card card">
+        <div class="how-buy-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l4-1 11-11-3-3L4 17l-1 4z"/><path d="M14 5l3-3 3 3-3 3"/><path d="M12 8l4 4"/></svg>
+        </div>
+        <h3>Опт и сотрудничество</h3>
+        <p>Магазинам, ИП и юрлицам: по телефону или email, наличные, безнал, СБП</p>
+        <a href="mailto:mail@urgrenki.ru" class="how-buy-action">Написать на email</a>
+      </article>
+      <article class="how-buy-card card">
+        <div class="how-buy-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v10H3z"/><path d="M14 10h4l3 3v4h-7z"/><circle cx="7" cy="18.5" r="1.6"/><circle cx="17" cy="18.5" r="1.6"/></svg>
+        </div>
+        <h3>Доставка</h3>
+        <p>Быстрые сроки по Екатеринбургу и области</p>
+        <a href="tel:+73433022565" class="how-buy-action">Узнать о доставке</a>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -132,7 +186,7 @@
       
     </div>
     <div class="ta-center mt-8">
-      <a href="https:&#x2F;&#x2F;urgrenki.ru/products/" class="btn btn-secondary">Вся продукция →</a>
+      <a href="https:&#x2F;&#x2F;urgrenki.ru/products/" class="btn btn-secondary" data-goal="products_all">Вся продукция →</a>
     </div>
   </div>
 </section>
@@ -269,11 +323,106 @@
 </section>
 
 
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <p class="eyebrow">Отзывы покупателей</p>
+      <h2>Что говорят о наших гренках</h2>
+      <p class="lead">Покупатели делятся впечатлениями на iRecommend и Яндекс Маркете</p>
+    </div>
+    <div class="grid-2">
+      <article class="review-card card">
+        <div class="review-stars" aria-label="Оценка 5 из 5">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+        </div>
+        <blockquote class="review-quote">«Лёгкий чесночный вкус и белый подсушенный хлеб - это невероятно вкусно!»</blockquote>
+        <p class="review-product">Гренки с чесноком, 100 г</p>
+        <p class="review-author">ural_ga · отзыв на iRecommend, 26.05.2024 · оценка 5/5</p>
+        <a href="https://irecommend.ru/content/sukhariki-grenki-uralskie-grenki-s-chesnokom" target="_blank" rel="noopener" class="review-source">Источник отзыва →</a>
+      </article>
+      <article class="review-card card">
+        <div class="review-stars" aria-label="Оценка 5 из 5">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+        </div>
+        <blockquote class="review-quote">«Тонкие, хрустящие, почти прозрачные, обжаренные, ломтики черного круглого хлеба, умеренно посыпанные солью и аджикой.…Одни из лучших сухариков для меня за последние годы - вкусные, не слишком жирные, не засыпанные глутаматом и ароматизатором по самое «не могу».»</blockquote>
+        <p class="review-product">Гренки с аджикой, 90 г</p>
+        <p class="review-author">ural_ga · отзыв на iRecommend, 26.05.2024 · оценка 5/5</p>
+        <a href="https://irecommend.ru/content/sukhariki-grenki-uralskie-grenki-s-adzhikoi" target="_blank" rel="noopener" class="review-source">Источник отзыва →</a>
+      </article>
+    </div>
+    <p class="review-fact ta-center">Оба отзыва рекомендуют продукт · оценка 5 из 5 на iRecommend</p>
+
+    <div class="review-market">
+      <h3 class="review-market-title">Отзывы на Яндекс Маркете</h3>
+      <div class="grid-3 review-market-grid">
+        <article class="review-card card">
+          <div class="review-stars" aria-label="Оценка 5 из 5">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+          </div>
+          <blockquote class="review-quote">«Угостила коллега по работе. Теперь берем только их!!!»</blockquote>
+          <p class="review-pro"><strong>Достоинства:</strong> Вкусные</p>
+          <p class="review-product">Гренки микс: 5 шт. с чесноком + 1 шт. с аджикой, 100 г</p>
+          <p class="review-author">Марина Баранова · Яндекс Маркет, 11 сентября 2025</p>
+          <a href="https://market.yandex.ru/card/grenki-uralskiye-miks--5-chesnok1-adzhika-100g/103479426555/reviews" target="_blank" rel="noopener" class="review-source">Источник отзыва →</a>
+        </article>
+        <article class="review-card card">
+          <div class="review-stars" aria-label="Оценка 5 из 5">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+          </div>
+          <blockquote class="review-quote">«в целом очень понравилось»</blockquote>
+          <p class="review-pro"><strong>Достоинства:</strong> вкусные сухарики с полезным составом</p>
+          <p class="review-product">Гренки микс: 5 шт. с чесноком + 1 шт. с аджикой, 100 г</p>
+          <p class="review-author">Алексей Бекетов · Яндекс Маркет, 27 марта 2025</p>
+          <a href="https://market.yandex.ru/card/grenki-uralskiye-miks--5-chesnok1-adzhika-100g/103479426555/reviews" target="_blank" rel="noopener" class="review-source">Источник отзыва →</a>
+        </article>
+        <article class="review-card card">
+          <div class="review-stars" aria-label="Оценка 5 из 5">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+          </div>
+          <blockquote class="review-quote">«пришли хорошо запакованные, целые. видно что добавки натуральные. с аджикой острые, но в меру»</blockquote>
+          <p class="review-pro"><strong>Достоинства:</strong> хорошо упакованы, целые, свежие</p>
+          <p class="review-product">Гренки микс: 5 шт. с чесноком + 1 шт. с аджикой, 100 г</p>
+          <p class="review-author">Покупатель Яндекс Маркета · 15 января 2025</p>
+          <a href="https://market.yandex.ru/card/grenki-uralskiye-miks--5-chesnok1-adzhika-100g/103479426555/reviews" target="_blank" rel="noopener" class="review-source">Источник отзыва →</a>
+        </article>
+      </div>
+      <p class="review-market-more ta-center">
+        <a href="https://market.yandex.ru/card/grenki-uralskiye-miks--5-chesnok1-adzhika-100g/103479426555/reviews" target="_blank" rel="noopener">Читать все отзывы на Яндекс Маркете →</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+
 <section class="section cta-strip">
   <div class="container cta-container">
     <p class="eyebrow">Не упустите</p>
-    <h2>Гренки расходятся быстро.<br>Не откладывайте хруст на завтра — закажите сегодня!</h2>
-    <a href="https:&#x2F;&#x2F;urgrenki.ru/products/" class="btn btn-primary">Заказать сейчас</a>
+    <h2>Расскажем о вкусах, ценах и доставке — ответим за пару минут</h2>
+    <div class="cta-actions">
+      <a href="tel:+73433022565" class="btn btn-primary" data-goal="cta_call">Позвонить: +7 (343) 302-25-65</a>
+      <button type="button" class="btn btn-secondary" data-callback data-goal="cta_callback">Заказать звонок</button>
+    </div>
+    <p class="cta-hours">Работаем пн–пт 9:00–18:00, сб 10:00–15:00</p>
   </div>
 </section>
 
@@ -329,17 +478,187 @@
       var menu = document.querySelector('.nav-menu');
       if (toggle && menu) {
         if (toggle.contains(e.target)) {
-          toggle.classList.toggle('active');
-          menu.classList.toggle('open');
+          var open = !menu.classList.contains('open');
+          toggle.classList.toggle('active', open);
+          menu.classList.toggle('open', open);
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
           return;
         }
-        if (!menu.contains(e.target)) {
+        if (!menu.contains(e.target) && menu.classList.contains('open')) {
           toggle.classList.remove('active');
           menu.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
         }
       }
     });
   </script>
+
   
+
+  <div class="call-bar">
+    <a href="tel:+73433022565" class="call-bar-btn call-bar-call" data-goal="tel_click_bar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>Позвонить</span>
+    </a>
+    <button type="button" class="call-bar-btn call-bar-callback" data-callback data-goal="mobile_callback">Заказать звонок</button>
+  </div>
+
+  <div class="modal-overlay" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-callback-title">
+      <button type="button" class="modal-close" aria-label="Закрыть">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <h3 id="modal-callback-title">Заказать звонок</h3>
+      <p class="modal-subtitle">Перезвоним в рабочее время: пн–пт 9:00–18:00, сб 10:00–15:00</p>
+      <div class="modal-form-wrap">
+        <form class="modal-form" novalidate>
+          <div class="form-field">
+            <label for="cb-name">Имя</label>
+            <input type="text" id="cb-name" name="name" placeholder="Ваше имя" required aria-describedby="cb-name-msg">
+            <p class="field-msg" id="cb-name-msg" hidden></p>
+          </div>
+          <div class="form-field">
+            <label for="cb-phone">Телефон</label>
+            <input type="tel" id="cb-phone" name="phone" placeholder="+7 (___) ___-__-__" required aria-describedby="cb-phone-msg">
+            <p class="field-msg" id="cb-phone-msg" hidden></p>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Жду звонка</button>
+          <p class="modal-consent">Отправляя заявку, вы соглашаетесь с <a href="https:&#x2F;&#x2F;urgrenki.ru/terms-conditions/">обработкой персональных данных</a></p>
+        </form>
+      </div>
+      <div class="modal-success" hidden>
+        <p class="modal-success-text">Заявка собрана — письмо открылось в почтовом приложении. Не открылось? Позвоните <a href="tel:+73433022565">+7 (343) 302-25-65</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var modal = document.querySelector('.modal-overlay');
+      var card = modal && modal.querySelector('.modal-card');
+      var lastFocus = null;
+
+      function openModal(){
+        if (!modal) return;
+        lastFocus = document.activeElement;
+        modal.classList.add('open');
+        modal.removeAttribute('hidden');
+        document.body.classList.add('modal-open');
+        var first = modal.querySelector('input[name="name"]');
+        if (first) first.focus();
+      }
+      function closeModal(){
+        if (!modal) return;
+        modal.classList.remove('open');
+        modal.setAttribute('hidden','');
+        document.body.classList.remove('modal-open');
+        if (lastFocus && lastFocus.focus) lastFocus.focus();
+      }
+
+      document.addEventListener('click', function(e){
+        var trigger = e.target.closest('[data-callback]');
+        if (trigger) { e.preventDefault(); openModal(); return; }
+        if (!modal) return;
+        if (modal.classList.contains('open')) {
+          if (e.target.closest('.modal-close') || e.target === modal) { closeModal(); return; }
+        }
+      });
+
+      document.addEventListener('keydown', function(e){
+        if (!modal || !modal.classList.contains('open')) return;
+        if (e.key === 'Escape') { closeModal(); return; }
+        if (e.key !== 'Tab') return;
+        var cardEl = modal.querySelector('.modal-card');
+        if (!cardEl) return;
+        var nodes = cardEl.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])');
+        var list = Array.prototype.filter.call(nodes, function(n){ return n.offsetParent !== null; });
+        if (!list.length) return;
+        var first = list[0];
+        var last = list[list.length - 1];
+        var active = document.activeElement;
+        if (e.shiftKey) {
+          if (active === first || list.indexOf(active) === -1) {
+            e.preventDefault();
+            last.focus();
+          }
+        } else {
+          if (active === last || list.indexOf(active) === -1) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+      });
+
+      function setError(field, msgEl, message){
+        field.classList.add('field-error');
+        field.setAttribute('aria-invalid', 'true');
+        if (msgEl) {
+          msgEl.textContent = message;
+          msgEl.removeAttribute('hidden');
+        }
+      }
+      function clearError(field, msgEl){
+        field.classList.remove('field-error');
+        field.removeAttribute('aria-invalid');
+        if (msgEl) msgEl.setAttribute('hidden', '');
+      }
+
+      function maskPhone(v){
+        v = v.replace(/\D/g,'').replace(/^8/,'7');
+        if (!v) return '';
+        if (v[0] !== '7') v = '7' + v;
+        v = v.slice(0,11);
+        var p = v.slice(1);
+        var out = '+7';
+        if (p.length) out += ' (' + p.slice(0,3);
+        if (p.length >= 3) out += ')';
+        if (p.length > 3) out += ' ' + p.slice(3,6);
+        if (p.length > 6) out += '-' + p.slice(6,8);
+        if (p.length > 8) out += '-' + p.slice(8,10);
+        return out;
+      }
+
+      if (modal) {
+        var form = modal.querySelector('.modal-form');
+        var phone = modal.querySelector('input[name="phone"]');
+        if (phone) {
+          phone.addEventListener('input', function(){ phone.value = maskPhone(phone.value); });
+        }
+        if (form) {
+          form.addEventListener('submit', function(e){
+            e.preventDefault();
+            var name = form.querySelector('input[name="name"]');
+            var phoneVal = phone.value.replace(/\D/g,'');
+            var nameMsg = modal.querySelector('#cb-name-msg');
+            var phoneMsg = modal.querySelector('#cb-phone-msg');
+            var nameOk = name && name.value.trim();
+            if (!nameOk) {
+              setError(name, nameMsg, 'Введите имя');
+              name.focus();
+              return;
+            }
+            clearError(name, nameMsg);
+            if (phoneVal.length < 11 || phoneVal[0] !== '7') {
+              setError(phone, phoneMsg, 'Телефон в формате +7 (999) 123-45-67');
+              phone.focus();
+              return;
+            }
+            clearError(phone, phoneMsg);
+            var subject = 'Заявка на обратный звонок — Уральские гренки';
+            var body = 'Имя: ' + name.value.trim() + '\nТелефон: ' + phone.value + '\nСтраница: ' + window.location.href;
+            window.location.href = 'mailto:mail@urgrenki.ru?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+            if (window.ymGoal) window.ymGoal('callback_form');
+            var success = modal.querySelector('.modal-success');
+            var formWrap = modal.querySelector('.modal-form-wrap');
+            if (success) success.removeAttribute('hidden');
+            if (formWrap) formWrap.setAttribute('hidden','');
+          });
+        }
+
+        var closeBtn = card && card.querySelector('.modal-close');
+        if (closeBtn) closeBtn.addEventListener('click', function(){ closeModal(); });
+      }
+    })();
+  </script>
 </body>
 </html>

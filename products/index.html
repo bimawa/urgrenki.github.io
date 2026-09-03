@@ -11,6 +11,10 @@
 
   <link rel="stylesheet" href="https://urgrenki.ru/style.css">
   <link rel="stylesheet" href="https://urgrenki.ru/main.css">
+  <link rel="stylesheet" href="https://urgrenki.ru/landing.css">
+  <link rel="stylesheet" href="https://urgrenki.ru/cta.css">
+
+  
 
   
 </head>
@@ -23,14 +27,14 @@
         <img src="https://urgrenki.ru/img/logo.png" alt="Уральские гренки" class="header-logo-img">
       </a>
 
-      <button class="nav-toggle" aria-label="Меню">
+      <button class="nav-toggle" aria-label="Меню" aria-expanded="false" aria-controls="site-menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
           <path d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
 
       <nav role="navigation" aria-label="Основное меню">
-        <ul class="nav-menu">
+        <ul class="nav-menu" id="site-menu">
           
           <li><a href="https:&#x2F;&#x2F;urgrenki.ru" class="nav-link">Главная</a></li>
           <li><a href="https:&#x2F;&#x2F;urgrenki.ru/products/" class="nav-link active">Продукция</a></li>
@@ -40,6 +44,15 @@
           <li><a href="https:&#x2F;&#x2F;urgrenki.ru/kontakty/" class="nav-link">Контакты</a></li>
         </ul>
       </nav>
+
+      <div class="header-cta">
+        <span class="header-cta-phone">+7 (343) 302-25-65</span>
+        <a href="tel:+73433022565" class="btn btn-primary header-cta-call">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>Позвонить</span>
+        </a>
+        <button type="button" class="btn btn-secondary header-cta-callback" data-callback data-goal="header_callback">Заказать звонок</button>
+      </div>
     </div>
   </header>
 
@@ -154,17 +167,187 @@
       var menu = document.querySelector('.nav-menu');
       if (toggle && menu) {
         if (toggle.contains(e.target)) {
-          toggle.classList.toggle('active');
-          menu.classList.toggle('open');
+          var open = !menu.classList.contains('open');
+          toggle.classList.toggle('active', open);
+          menu.classList.toggle('open', open);
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
           return;
         }
-        if (!menu.contains(e.target)) {
+        if (!menu.contains(e.target) && menu.classList.contains('open')) {
           toggle.classList.remove('active');
           menu.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
         }
       }
     });
   </script>
+
   
+
+  <div class="call-bar">
+    <a href="tel:+73433022565" class="call-bar-btn call-bar-call" data-goal="tel_click_bar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>Позвонить</span>
+    </a>
+    <button type="button" class="call-bar-btn call-bar-callback" data-callback data-goal="mobile_callback">Заказать звонок</button>
+  </div>
+
+  <div class="modal-overlay" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-callback-title">
+      <button type="button" class="modal-close" aria-label="Закрыть">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <h3 id="modal-callback-title">Заказать звонок</h3>
+      <p class="modal-subtitle">Перезвоним в рабочее время: пн–пт 9:00–18:00, сб 10:00–15:00</p>
+      <div class="modal-form-wrap">
+        <form class="modal-form" novalidate>
+          <div class="form-field">
+            <label for="cb-name">Имя</label>
+            <input type="text" id="cb-name" name="name" placeholder="Ваше имя" required aria-describedby="cb-name-msg">
+            <p class="field-msg" id="cb-name-msg" hidden></p>
+          </div>
+          <div class="form-field">
+            <label for="cb-phone">Телефон</label>
+            <input type="tel" id="cb-phone" name="phone" placeholder="+7 (___) ___-__-__" required aria-describedby="cb-phone-msg">
+            <p class="field-msg" id="cb-phone-msg" hidden></p>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Жду звонка</button>
+          <p class="modal-consent">Отправляя заявку, вы соглашаетесь с <a href="https:&#x2F;&#x2F;urgrenki.ru/terms-conditions/">обработкой персональных данных</a></p>
+        </form>
+      </div>
+      <div class="modal-success" hidden>
+        <p class="modal-success-text">Заявка собрана — письмо открылось в почтовом приложении. Не открылось? Позвоните <a href="tel:+73433022565">+7 (343) 302-25-65</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var modal = document.querySelector('.modal-overlay');
+      var card = modal && modal.querySelector('.modal-card');
+      var lastFocus = null;
+
+      function openModal(){
+        if (!modal) return;
+        lastFocus = document.activeElement;
+        modal.classList.add('open');
+        modal.removeAttribute('hidden');
+        document.body.classList.add('modal-open');
+        var first = modal.querySelector('input[name="name"]');
+        if (first) first.focus();
+      }
+      function closeModal(){
+        if (!modal) return;
+        modal.classList.remove('open');
+        modal.setAttribute('hidden','');
+        document.body.classList.remove('modal-open');
+        if (lastFocus && lastFocus.focus) lastFocus.focus();
+      }
+
+      document.addEventListener('click', function(e){
+        var trigger = e.target.closest('[data-callback]');
+        if (trigger) { e.preventDefault(); openModal(); return; }
+        if (!modal) return;
+        if (modal.classList.contains('open')) {
+          if (e.target.closest('.modal-close') || e.target === modal) { closeModal(); return; }
+        }
+      });
+
+      document.addEventListener('keydown', function(e){
+        if (!modal || !modal.classList.contains('open')) return;
+        if (e.key === 'Escape') { closeModal(); return; }
+        if (e.key !== 'Tab') return;
+        var cardEl = modal.querySelector('.modal-card');
+        if (!cardEl) return;
+        var nodes = cardEl.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])');
+        var list = Array.prototype.filter.call(nodes, function(n){ return n.offsetParent !== null; });
+        if (!list.length) return;
+        var first = list[0];
+        var last = list[list.length - 1];
+        var active = document.activeElement;
+        if (e.shiftKey) {
+          if (active === first || list.indexOf(active) === -1) {
+            e.preventDefault();
+            last.focus();
+          }
+        } else {
+          if (active === last || list.indexOf(active) === -1) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+      });
+
+      function setError(field, msgEl, message){
+        field.classList.add('field-error');
+        field.setAttribute('aria-invalid', 'true');
+        if (msgEl) {
+          msgEl.textContent = message;
+          msgEl.removeAttribute('hidden');
+        }
+      }
+      function clearError(field, msgEl){
+        field.classList.remove('field-error');
+        field.removeAttribute('aria-invalid');
+        if (msgEl) msgEl.setAttribute('hidden', '');
+      }
+
+      function maskPhone(v){
+        v = v.replace(/\D/g,'').replace(/^8/,'7');
+        if (!v) return '';
+        if (v[0] !== '7') v = '7' + v;
+        v = v.slice(0,11);
+        var p = v.slice(1);
+        var out = '+7';
+        if (p.length) out += ' (' + p.slice(0,3);
+        if (p.length >= 3) out += ')';
+        if (p.length > 3) out += ' ' + p.slice(3,6);
+        if (p.length > 6) out += '-' + p.slice(6,8);
+        if (p.length > 8) out += '-' + p.slice(8,10);
+        return out;
+      }
+
+      if (modal) {
+        var form = modal.querySelector('.modal-form');
+        var phone = modal.querySelector('input[name="phone"]');
+        if (phone) {
+          phone.addEventListener('input', function(){ phone.value = maskPhone(phone.value); });
+        }
+        if (form) {
+          form.addEventListener('submit', function(e){
+            e.preventDefault();
+            var name = form.querySelector('input[name="name"]');
+            var phoneVal = phone.value.replace(/\D/g,'');
+            var nameMsg = modal.querySelector('#cb-name-msg');
+            var phoneMsg = modal.querySelector('#cb-phone-msg');
+            var nameOk = name && name.value.trim();
+            if (!nameOk) {
+              setError(name, nameMsg, 'Введите имя');
+              name.focus();
+              return;
+            }
+            clearError(name, nameMsg);
+            if (phoneVal.length < 11 || phoneVal[0] !== '7') {
+              setError(phone, phoneMsg, 'Телефон в формате +7 (999) 123-45-67');
+              phone.focus();
+              return;
+            }
+            clearError(phone, phoneMsg);
+            var subject = 'Заявка на обратный звонок — Уральские гренки';
+            var body = 'Имя: ' + name.value.trim() + '\nТелефон: ' + phone.value + '\nСтраница: ' + window.location.href;
+            window.location.href = 'mailto:mail@urgrenki.ru?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+            if (window.ymGoal) window.ymGoal('callback_form');
+            var success = modal.querySelector('.modal-success');
+            var formWrap = modal.querySelector('.modal-form-wrap');
+            if (success) success.removeAttribute('hidden');
+            if (formWrap) formWrap.setAttribute('hidden','');
+          });
+        }
+
+        var closeBtn = card && card.querySelector('.modal-close');
+        if (closeBtn) closeBtn.addEventListener('click', function(){ closeModal(); });
+      }
+    })();
+  </script>
 </body>
 </html>
