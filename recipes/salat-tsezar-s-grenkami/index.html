@@ -227,12 +227,13 @@
             <input type="tel" id="cb-phone" name="phone" placeholder="+7 (___) ___-__-__" required aria-describedby="cb-phone-msg">
             <p class="field-msg" id="cb-phone-msg" hidden></p>
           </div>
+          <p class="field-msg" id="cb-send-msg" hidden></p>
           <button type="submit" class="btn btn-primary btn-full">Жду звонка</button>
           <p class="modal-consent">Отправляя заявку, вы соглашаетесь с <a href="https:&#x2F;&#x2F;urgrenki.ru/terms-conditions/">обработкой персональных данных</a></p>
         </form>
       </div>
       <div class="modal-success" hidden>
-        <p class="modal-success-text">Заявка собрана — письмо открылось в почтовом приложении. Не открылось? Позвоните <a href="tel:+73433022565">+7 (343) 302-25-65</a></p>
+        <p class="modal-success-text">Заявка отправлена! Перезвоним в рабочее время. Не получилось? Позвоните <a href="tel:+73433022565">+7 (343) 302-25-65</a></p>
       </div>
     </div>
   </div>
@@ -349,14 +350,38 @@
               return;
             }
             clearError(phone, phoneMsg);
-            var subject = 'Заявка на обратный звонок — Уральские гренки';
-            var body = 'Имя: ' + name.value.trim() + '\nТелефон: ' + phone.value + '\nСтраница: ' + window.location.href;
-            window.location.href = 'mailto:mail@urgrenki.ru?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-            if (window.ymGoal) window.ymGoal('callback_form');
-            var success = modal.querySelector('.modal-success');
-            var formWrap = modal.querySelector('.modal-form-wrap');
-            if (success) success.removeAttribute('hidden');
-            if (formWrap) formWrap.setAttribute('hidden','');
+            var submitBtn = form.querySelector('button[type="submit"]');
+            var sendMsg = modal.querySelector('#cb-send-msg');
+            var originalLabel = submitBtn.textContent;
+            if (sendMsg) sendMsg.setAttribute('hidden', '');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Отправляем…';
+            var body = {
+              name: name.value.trim(),
+              phone: phone.value,
+              page: window.location.href,
+            };
+            fetch('https://formsubmit.co/ajax/mail@urgrenki.ru', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+              body: JSON.stringify(body)
+            })
+            .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+            .then(function(){
+              if (window.ymGoal) window.ymGoal('callback_form');
+              var success = modal.querySelector('.modal-success');
+              var formWrap = modal.querySelector('.modal-form-wrap');
+              if (success) success.removeAttribute('hidden');
+              if (formWrap) formWrap.setAttribute('hidden','');
+            })
+            .catch(function(){
+              submitBtn.disabled = false;
+              submitBtn.textContent = originalLabel;
+              if (sendMsg) {
+                sendMsg.textContent = 'Не получилось отправить. Попробуйте ещё раз или позвоните ' + '+7 (343) 302-25-65';
+                sendMsg.removeAttribute('hidden');
+              }
+            });
           });
         }
 
