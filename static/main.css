@@ -175,7 +175,7 @@ h4, .h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-6);
+  gap: var(--space-4);
 }
 .header-logo {
   font-family: var(--font-display);
@@ -191,7 +191,7 @@ h4, .h4 {
 
 .nav-menu {
   display: flex;
-  gap: var(--space-6);
+  gap: var(--space-4);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -200,6 +200,7 @@ h4, .h4 {
   font-size: var(--text-base);
   color: var(--fg-2);
   padding: var(--space-1) 0;
+  white-space: nowrap;
   border-bottom: 2px solid transparent;
   transition: border-color var(--motion-fast) var(--ease-standard), color var(--motion-fast) var(--ease-standard);
 }
@@ -220,7 +221,7 @@ h4, .h4 {
 }
 .nav-toggle svg { width: 28px; height: 28px; display: block; }
 
-@media (max-width: 768px) {
+@media (max-width: 772px) {
   .nav-toggle { display: block; }
   .nav-menu {
     display: none;
