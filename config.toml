@@ -22,6 +22,7 @@ phone_clean = "+73433022565"
 email = "mail@urgrenki.ru"
 address = "Екатеринбург, Россия, 8 марта"
 footer_copyright = "© Уральские гренки"
+metrica_id = ""
 
 # Theme (empty = use root templates/static directly)
 theme = ""

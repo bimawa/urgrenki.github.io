@@ -1,0 +1,162 @@
+/* Hero actions */
+.hero .eyebrow {
+  color: rgba(255, 255, 255, 0.95);
+}
+.hero .lead {
+  color: rgba(255, 255, 255, 0.95);
+}
+.hero-overlay {
+  background: linear-gradient(to bottom, rgba(43, 33, 28, 0.68) 0%, rgba(43, 33, 28, 0.50) 100%);
+}
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-6);
+}
+.hero .hero-actions .btn {
+  box-shadow: var(--elev-raised);
+}
+.hero-catalog-link {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+  padding: 4px 2px;
+}
+.hero-catalog-link:hover {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+.hero-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: #fff;
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+@media (max-width: 480px) {
+  .hero-phone {
+    font-size: var(--text-base);
+  }
+}
+
+/* How to buy */
+.how-buy-grid {
+  align-items: stretch;
+}
+.how-buy-card {
+  display: flex;
+  flex-direction: column;
+}
+.how-buy-card h3 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-2);
+}
+.how-buy-card p {
+  color: var(--fg-2);
+  flex-grow: 1;
+  margin-bottom: var(--space-4);
+}
+.how-buy-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: var(--accent-soft);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+}
+.how-buy-icon svg {
+  width: 28px;
+  height: 28px;
+}
+.how-buy-action {
+  font-weight: 600;
+}
+
+/* Reviews */
+.review-card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.review-stars {
+  display: flex;
+  gap: var(--space-1);
+  color: #a5711f;
+  margin-bottom: var(--space-4);
+}
+.review-quote {
+  margin: 0 0 var(--space-5);
+  font-size: var(--text-lg);
+  line-height: var(--leading-body);
+  color: var(--fg);
+}
+.review-product {
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+.review-author {
+  color: var(--muted);
+  font-size: var(--text-sm);
+  font-family: var(--font-mono);
+  margin-bottom: var(--space-4);
+}
+.review-source {
+  margin-top: auto;
+  font-weight: 600;
+}
+.review-fact {
+  margin-top: var(--space-8);
+  color: var(--fg-2);
+  font-weight: 600;
+}
+
+/* Reviews: Yandex Market */
+.review-market {
+  margin-top: var(--space-12);
+}
+.review-market-title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  text-align: center;
+  margin: 0 0 var(--space-8);
+}
+.review-market-grid {
+  align-items: stretch;
+}
+.review-pro {
+  color: var(--fg-2);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-2);
+}
+.review-pro strong {
+  color: var(--fg);
+}
+.review-market-more {
+  margin-top: var(--space-8);
+  font-weight: 600;
+}
+
+/* CTA */
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-6);
+}
+.cta-actions .btn {
+  box-shadow: var(--elev-raised);
+}
+.cta-hours {
+  color: var(--fg-2);
+  font-size: var(--text-sm);
+  margin-bottom: 0;
+}

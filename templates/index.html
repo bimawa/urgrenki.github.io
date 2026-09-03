@@ -11,9 +11,50 @@
   </div>
   <div class="hero-overlay"></div>
   <div class="container hero-content">
-    <h1>Лучшие Гренки</h1>
-    <p class="lead">100% натуральный состав. Старинные рецепты.</p>
-    <a href="{{ config.base_url }}/products/" class="btn btn-primary">Вся продукция</a>
+    <p class="eyebrow">Семейное производство · Екатеринбург</p>
+    <h1>Натуральные гренки из чёрного хлеба от 99 ₽</h1>
+    <p class="lead">Тонкие, хрустящие, по старинным уральским рецептам. 100% натуральный состав — без консервантов и усилителей вкуса. Опт и розница, доставка по Екатеринбургу и области.</p>
+    <div class="hero-actions">
+      <button type="button" class="btn btn-primary" data-callback data-goal="hero_callback">Заказать звонок</button>
+      <a href="{{ config.base_url }}/products/" class="hero-catalog-link">Смотреть продукцию →</a>
+    </div>
+    <a href="tel:{{ config.extra.phone_clean }}" class="hero-phone">Или позвоните: {{ config.extra.phone }}</a>
+  </div>
+</section>
+
+{# ─── Как купить ──────────────────────── #}
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <p class="eyebrow">Заказ и доставка</p>
+      <h2>Как купить наши гренки</h2>
+    </div>
+    <div class="grid-3 how-buy-grid">
+      <article class="how-buy-card card">
+        <div class="how-buy-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7V6a6 6 0 1112 0v1"/><path d="M4 7h16l-1 13H5L4 7z"/><path d="M12 11v4"/></svg>
+        </div>
+        <h3>Розница</h3>
+        <p>99 ₽ за пачку (100 г): заказ по телефону или email</p>
+        <a href="tel:{{ config.extra.phone_clean }}" class="how-buy-action">Заказать по телефону</a>
+      </article>
+      <article class="how-buy-card card">
+        <div class="how-buy-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l4-1 11-11-3-3L4 17l-1 4z"/><path d="M14 5l3-3 3 3-3 3"/><path d="M12 8l4 4"/></svg>
+        </div>
+        <h3>Опт и сотрудничество</h3>
+        <p>Магазинам, ИП и юрлицам: по телефону или email, наличные, безнал, СБП</p>
+        <a href="mailto:{{ config.extra.email }}" class="how-buy-action">Написать на email</a>
+      </article>
+      <article class="how-buy-card card">
+        <div class="how-buy-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v10H3z"/><path d="M14 10h4l3 3v4h-7z"/><circle cx="7" cy="18.5" r="1.6"/><circle cx="17" cy="18.5" r="1.6"/></svg>
+        </div>
+        <h3>Доставка</h3>
+        <p>Быстрые сроки по Екатеринбургу и области</p>
+        <a href="tel:{{ config.extra.phone_clean }}" class="how-buy-action">Узнать о доставке</a>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -70,7 +111,7 @@
       {% endfor %}
     </div>
     <div class="ta-center mt-8">
-      <a href="{{ config.base_url }}/products/" class="btn btn-secondary">Вся продукция →</a>
+      <a href="{{ config.base_url }}/products/" class="btn btn-secondary" data-goal="products_all">Вся продукция →</a>
     </div>
   </div>
 </section>
@@ -193,12 +234,107 @@
   </div>
 </section>
 
+{# ─── Отзывы ─────────────────────────── #}
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <p class="eyebrow">Отзывы покупателей</p>
+      <h2>Что говорят о наших гренках</h2>
+      <p class="lead">Покупатели делятся впечатлениями на iRecommend и Яндекс Маркете</p>
+    </div>
+    <div class="grid-2">
+      <article class="review-card card">
+        <div class="review-stars" aria-label="Оценка 5 из 5">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+        </div>
+        <blockquote class="review-quote">«Лёгкий чесночный вкус и белый подсушенный хлеб - это невероятно вкусно!»</blockquote>
+        <p class="review-product">Гренки с чесноком, 100 г</p>
+        <p class="review-author">ural_ga · отзыв на iRecommend, 26.05.2024 · оценка 5/5</p>
+        <a href="https://irecommend.ru/content/sukhariki-grenki-uralskie-grenki-s-chesnokom" target="_blank" rel="noopener" class="review-source">Источник отзыва →</a>
+      </article>
+      <article class="review-card card">
+        <div class="review-stars" aria-label="Оценка 5 из 5">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+        </div>
+        <blockquote class="review-quote">«Тонкие, хрустящие, почти прозрачные, обжаренные, ломтики черного круглого хлеба, умеренно посыпанные солью и аджикой.…Одни из лучших сухариков для меня за последние годы - вкусные, не слишком жирные, не засыпанные глутаматом и ароматизатором по самое «не могу».»</blockquote>
+        <p class="review-product">Гренки с аджикой, 90 г</p>
+        <p class="review-author">ural_ga · отзыв на iRecommend, 26.05.2024 · оценка 5/5</p>
+        <a href="https://irecommend.ru/content/sukhariki-grenki-uralskie-grenki-s-adzhikoi" target="_blank" rel="noopener" class="review-source">Источник отзыва →</a>
+      </article>
+    </div>
+    <p class="review-fact ta-center">Оба отзыва рекомендуют продукт · оценка 5 из 5 на iRecommend</p>
+
+    <div class="review-market">
+      <h3 class="review-market-title">Отзывы на Яндекс Маркете</h3>
+      <div class="grid-3 review-market-grid">
+        <article class="review-card card">
+          <div class="review-stars" aria-label="Оценка 5 из 5">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+          </div>
+          <blockquote class="review-quote">«Угостила коллега по работе. Теперь берем только их!!!»</blockquote>
+          <p class="review-pro"><strong>Достоинства:</strong> Вкусные</p>
+          <p class="review-product">Гренки микс: 5 шт. с чесноком + 1 шт. с аджикой, 100 г</p>
+          <p class="review-author">Марина Баранова · Яндекс Маркет, 11 сентября 2025</p>
+          <a href="https://market.yandex.ru/card/grenki-uralskiye-miks--5-chesnok1-adzhika-100g/103479426555/reviews" target="_blank" rel="noopener" class="review-source">Источник отзыва →</a>
+        </article>
+        <article class="review-card card">
+          <div class="review-stars" aria-label="Оценка 5 из 5">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+          </div>
+          <blockquote class="review-quote">«в целом очень понравилось»</blockquote>
+          <p class="review-pro"><strong>Достоинства:</strong> вкусные сухарики с полезным составом</p>
+          <p class="review-product">Гренки микс: 5 шт. с чесноком + 1 шт. с аджикой, 100 г</p>
+          <p class="review-author">Алексей Бекетов · Яндекс Маркет, 27 марта 2025</p>
+          <a href="https://market.yandex.ru/card/grenki-uralskiye-miks--5-chesnok1-adzhika-100g/103479426555/reviews" target="_blank" rel="noopener" class="review-source">Источник отзыва →</a>
+        </article>
+        <article class="review-card card">
+          <div class="review-stars" aria-label="Оценка 5 из 5">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+          </div>
+          <blockquote class="review-quote">«пришли хорошо запакованные, целые. видно что добавки натуральные. с аджикой острые, но в меру»</blockquote>
+          <p class="review-pro"><strong>Достоинства:</strong> хорошо упакованы, целые, свежие</p>
+          <p class="review-product">Гренки микс: 5 шт. с чесноком + 1 шт. с аджикой, 100 г</p>
+          <p class="review-author">Покупатель Яндекс Маркета · 15 января 2025</p>
+          <a href="https://market.yandex.ru/card/grenki-uralskiye-miks--5-chesnok1-adzhika-100g/103479426555/reviews" target="_blank" rel="noopener" class="review-source">Источник отзыва →</a>
+        </article>
+      </div>
+      <p class="review-market-more ta-center">
+        <a href="https://market.yandex.ru/card/grenki-uralskiye-miks--5-chesnok1-adzhika-100g/103479426555/reviews" target="_blank" rel="noopener">Читать все отзывы на Яндекс Маркете →</a>
+      </p>
+    </div>
+  </div>
+</section>
+
 {# ─── CTA ──────────────────────────────── #}
 <section class="section cta-strip">
   <div class="container cta-container">
     <p class="eyebrow">Не упустите</p>
-    <h2>Гренки расходятся быстро.<br>Не откладывайте хруст на завтра — закажите сегодня!</h2>
-    <a href="{{ config.base_url }}/products/" class="btn btn-primary">Заказать сейчас</a>
+    <h2>Расскажем о вкусах, ценах и доставке — ответим за пару минут</h2>
+    <div class="cta-actions">
+      <a href="tel:{{ config.extra.phone_clean }}" class="btn btn-primary" data-goal="cta_call">Позвонить: {{ config.extra.phone }}</a>
+      <button type="button" class="btn btn-secondary" data-callback data-goal="cta_callback">Заказать звонок</button>
+    </div>
+    <p class="cta-hours">Работаем пн–пт 9:00–18:00, сб 10:00–15:00</p>
   </div>
 </section>
 {% endblock content %}
