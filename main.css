@@ -185,6 +185,7 @@ h4, .h4 {
   white-space: nowrap;
 }
 .header-logo:hover { color: var(--accent); }
+.header-logo { flex-shrink: 0; }
 .header-logo img { max-height: 48px; width: auto; }
 .header-logo-img { height: 48px; width: auto; display: block; }
 

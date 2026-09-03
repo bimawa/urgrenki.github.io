@@ -47,7 +47,7 @@
   }
 }
 
-@media (max-width: 899px) and (min-width: 769px) {
+@media (max-width: 923px) and (min-width: 769px) {
   .header-cta-callback {
     display: none;
   }
