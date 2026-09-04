@@ -258,6 +258,7 @@ h4, .h4 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 62%;
   display: block;
 }
 .hero-overlay {
@@ -282,6 +283,25 @@ h4, .h4 {
   margin: 0 auto var(--space-8);
   font-size: clamp(17px, 2.2vw, var(--text-lg));
   color: rgba(255,255,255,0.9);
+}
+/* Mobile: photo as a full-width 16:9 strip, content below on dark */
+@media (max-width: 920px) {
+  .hero {
+    display: block;
+    padding: 56.25vw 0 var(--space-8);
+    background: var(--fg);
+  }
+  .hero-bg {
+    inset: 0 0 auto 0;
+    height: 56.25vw;
+  }
+  .hero-overlay {
+    inset: 0 0 auto 0;
+    height: 56.25vw;
+  }
+  .hero-content {
+    padding: var(--space-8) var(--container-gutter-tablet) 0;
+  }
 }
 
 /* ─── Buttons ────────────────────────────────── */
