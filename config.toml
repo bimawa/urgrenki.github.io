@@ -1,7 +1,7 @@
 # Zola configuration — Уральские гренки
 base_url = "https://urgrenki.ru"
 title = "Уральские гренки"
-description = "Натуральные гренки из отборного чёрного хлеба. Старинные рецепты, 100% натуральный состав."
+description = "Натуральные гренки из отборного хлеба. Старинные рецепты, 100% натуральный состав."
 default_language = "ru"
 compile_sass = false
 build_search_index = false
