@@ -8,7 +8,7 @@ categories = ["recipes"]
 
 [extra]
 author = "Уральские гренки"
-image = "recipes/caesar-salad.svg"
+image = "recipes/caesar-salad.png"
 +++
 
 Салат «Цезарь» — пожалуй, самый известный салат в мире. А с хрустящими уральскими гренками он становится ещё вкуснее и сытнее.
