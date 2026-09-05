@@ -1128,6 +1128,13 @@ h4, .h4 {
   height: auto;
   display: block;
 }
+.post-figure-caption {
+  padding: var(--space-3) var(--space-4) var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--muted);
+  text-align: center;
+}
 
 .post-nav-grid {
   display: grid;
